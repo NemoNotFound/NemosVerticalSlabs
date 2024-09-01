@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "nemos-vertical-slabs",
+	"version": "${version}",
+	"name": "Nemo's Vertical Slabs",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nemos-vertical-slabs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs"
+		],
+		"client": [
+			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabsClient"
+		],
+		"fabric-datagen": [
+			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabsDataGenerator"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
