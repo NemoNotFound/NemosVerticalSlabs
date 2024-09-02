@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-02T18:20:10.2409473	Nemo's Vertical Slabs/Model Definitions
+// 1.20.1	2024-09-02T19:31:15.8682472	Nemo's Vertical Slabs/Model Definitions
 6bde3b0c434f5c1d2caae2c283a4314ca9321c3b assets\nemos-vertical-slabs\models\block\mangrove_vertical_slab_left.json
 52ed2cb4e5eee8fd854c910216edb52235d9d20e assets\nemos-vertical-slabs\models\block\bamboo_vertical_slab_back.json
 4ac1560ce6a0a2bc0814fb0f7aaf2306fd0ed318 assets\nemos-vertical-slabs\blockstates\oak_vertical_slab.json
@@ -9,8 +9,8 @@ cfcdc6c1f04b85e3f0592d773b2673b311a12148 assets\nemos-vertical-slabs\models\bloc
 d435a974cbe52c6dd4a3acdbf3be10ca06592cde assets\nemos-vertical-slabs\models\item\acacia_vertical_slab.json
 1c695da1775da1636880f56629a3eded24f1840a assets\nemos-vertical-slabs\models\block\cherry_vertical_slab_left.json
 a72fe49d84f5b0eb3d670e4ecc97d05b9c1cfa78 assets\nemos-vertical-slabs\blockstates\dark_oak_vertical_slab.json
-2e0a2cf554066a2c972c97b91b61f6558562fc75 assets\nemos-vertical-slabs\blockstates\birch_vertical_slab.json
 72464189a9f90269732a98bafb650ef22e521a48 assets\nemos-vertical-slabs\blockstates\warped_vertical_slab.json
+2e0a2cf554066a2c972c97b91b61f6558562fc75 assets\nemos-vertical-slabs\blockstates\birch_vertical_slab.json
 1f3cad5a26434f81d3d691e863cc73c183751d6d assets\nemos-vertical-slabs\models\block\oak_vertical_slab_back.json
 ee6547212476cb63877ece6e0bcdccae0e6a5f93 assets\nemos-vertical-slabs\blockstates\bamboo_vertical_slab.json
 4f31860298a2c3184fd0c03d8f64e983a5b9596b assets\nemos-vertical-slabs\models\block\dark_oak_vertical_slab.json

@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#minecraft:planks"
+            "tag": "minecraft:planks"
           }
         ]
       },
@@ -20,13 +20,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_wood"
+      "has_wood",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "nemos-vertical-slabs:bamboo_mosaic_vertical_slab"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

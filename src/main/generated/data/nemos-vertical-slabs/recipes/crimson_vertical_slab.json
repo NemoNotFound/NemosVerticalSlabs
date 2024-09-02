@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:bamboo_mosaic"
+      "item": "minecraft:crimson_planks"
     }
   },
   "pattern": [
@@ -13,6 +13,7 @@
   ],
   "result": {
     "count": 6,
-    "id": "nemos-vertical-slabs:bamboo_mosaic_vertical_slab"
-  }
+    "item": "nemos-vertical-slabs:crimson_vertical_slab"
+  },
+  "show_notification": true
 }

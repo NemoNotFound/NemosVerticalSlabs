@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:birch_planks"
     }
   },
   "pattern": [
@@ -13,6 +13,7 @@
   ],
   "result": {
     "count": 6,
-    "id": "nemos-vertical-slabs:oak_vertical_slab"
-  }
+    "item": "nemos-vertical-slabs:birch_vertical_slab"
+  },
+  "show_notification": true
 }

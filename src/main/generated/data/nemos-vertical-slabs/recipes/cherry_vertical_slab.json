@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:mangrove_planks"
+      "item": "minecraft:cherry_planks"
     }
   },
   "pattern": [
@@ -13,6 +13,7 @@
   ],
   "result": {
     "count": 6,
-    "id": "nemos-vertical-slabs:mangrove_vertical_slab"
-  }
+    "item": "nemos-vertical-slabs:cherry_vertical_slab"
+  },
+  "show_notification": true
 }

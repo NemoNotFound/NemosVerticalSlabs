@@ -1,13 +1,13 @@
-// 1.21.1	2024-09-02T18:20:10.2419451	Nemo's Vertical Slabs/Block Loot Tables
-7c472426f9fe063c6310ea413073e3b86cb98f91 data\nemos-vertical-slabs\loot_table\blocks\oak_vertical_slab.json
-8960163e8b938989e7abed033d92707a2b3bfa51 data\nemos-vertical-slabs\loot_table\blocks\dark_oak_vertical_slab.json
-80ac2ec423da53ece2b5e3db61e0387c07f2d1b8 data\nemos-vertical-slabs\loot_table\blocks\bamboo_vertical_slab.json
-bf80d6276b1d5848caf00a46c3f6235cda08a114 data\nemos-vertical-slabs\loot_table\blocks\spruce_vertical_slab.json
-a0de66899f96d538075799ecd753a3a893f8f0be data\nemos-vertical-slabs\loot_table\blocks\mangrove_vertical_slab.json
-a883d6b3b57b1d248f20bc6bd56916afac9729b9 data\nemos-vertical-slabs\loot_table\blocks\jungle_vertical_slab.json
-fbe5232abf449d0f66281012faf2abfced5a077a data\nemos-vertical-slabs\loot_table\blocks\crimson_vertical_slab.json
-1807053b729c21f1ac2ac18befa2ffca32199e73 data\nemos-vertical-slabs\loot_table\blocks\acacia_vertical_slab.json
-eda46df36e1c1dfb9f329cf0cc341e85aa7b9814 data\nemos-vertical-slabs\loot_table\blocks\bamboo_mosaic_vertical_slab.json
-32f5820d3f0c715f807282e0c9b572a21fd45468 data\nemos-vertical-slabs\loot_table\blocks\cherry_vertical_slab.json
-2ad57ef8b49bb09e3aa2c85872a3044af99b44d7 data\nemos-vertical-slabs\loot_table\blocks\warped_vertical_slab.json
-ea747a1b005f99eee9447572a4f57e768604ea9a data\nemos-vertical-slabs\loot_table\blocks\birch_vertical_slab.json
+// 1.20.1	2024-09-02T19:31:15.8697472	Nemo's Vertical Slabs/Block Loot Tables
+eda46df36e1c1dfb9f329cf0cc341e85aa7b9814 data\nemos-vertical-slabs\loot_tables\blocks\bamboo_mosaic_vertical_slab.json
+bf80d6276b1d5848caf00a46c3f6235cda08a114 data\nemos-vertical-slabs\loot_tables\blocks\spruce_vertical_slab.json
+fbe5232abf449d0f66281012faf2abfced5a077a data\nemos-vertical-slabs\loot_tables\blocks\crimson_vertical_slab.json
+a883d6b3b57b1d248f20bc6bd56916afac9729b9 data\nemos-vertical-slabs\loot_tables\blocks\jungle_vertical_slab.json
+ea747a1b005f99eee9447572a4f57e768604ea9a data\nemos-vertical-slabs\loot_tables\blocks\birch_vertical_slab.json
+1807053b729c21f1ac2ac18befa2ffca32199e73 data\nemos-vertical-slabs\loot_tables\blocks\acacia_vertical_slab.json
+8960163e8b938989e7abed033d92707a2b3bfa51 data\nemos-vertical-slabs\loot_tables\blocks\dark_oak_vertical_slab.json
+32f5820d3f0c715f807282e0c9b572a21fd45468 data\nemos-vertical-slabs\loot_tables\blocks\cherry_vertical_slab.json
+a0de66899f96d538075799ecd753a3a893f8f0be data\nemos-vertical-slabs\loot_tables\blocks\mangrove_vertical_slab.json
+80ac2ec423da53ece2b5e3db61e0387c07f2d1b8 data\nemos-vertical-slabs\loot_tables\blocks\bamboo_vertical_slab.json
+2ad57ef8b49bb09e3aa2c85872a3044af99b44d7 data\nemos-vertical-slabs\loot_tables\blocks\warped_vertical_slab.json
+7c472426f9fe063c6310ea413073e3b86cb98f91 data\nemos-vertical-slabs\loot_tables\blocks\oak_vertical_slab.json

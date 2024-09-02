@@ -1,6 +1,5 @@
 package com.nemonotfound.nemosverticalslabs.block;
 
-import com.mojang.serialization.MapCodec;
 import com.nemonotfound.nemosverticalslabs.block.enums.VerticalSlabType;
 import com.nemonotfound.nemosverticalslabs.property.ModProperties;
 import net.minecraft.block.Block;
@@ -8,7 +7,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -29,7 +27,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class VerticalSlabBlock extends Block implements Waterloggable {
 
-    public static final MapCodec<VerticalSlabBlock> CODEC = VerticalSlabBlock.createCodec(VerticalSlabBlock::new);
     public static EnumProperty<VerticalSlabType> TYPE = ModProperties.VERTICAL_SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     protected static final VoxelShape FRONT_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16, 8);
@@ -37,17 +34,13 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     protected static final VoxelShape RIGHT_SHAPE = Block.createCuboidShape(8, 0, 0, 16, 16, 16);
     protected static final VoxelShape BACK_SHAPE = Block.createCuboidShape(0, 0, 8, 16, 16, 16);
 
-    public MapCodec<? extends VerticalSlabBlock> getCodec() {
-        return CODEC;
-    }
-
     public VerticalSlabBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(TYPE, VerticalSlabType.FRONT).with(WATERLOGGED, false));
     }
 
     @Override
-    protected boolean hasSidedTransparency(BlockState state) {
+    public boolean hasSidedTransparency(BlockState state) {
         return state.get(TYPE) != VerticalSlabType.DOUBLE;
     }
 
@@ -57,7 +50,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         VerticalSlabType slabType = state.get(TYPE);
 
         return switch (slabType) {
@@ -176,7 +169,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected boolean canReplace(BlockState state, ItemPlacementContext context) {
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
         ItemStack itemStack = context.getStack();
         VerticalSlabType slabType = state.get(TYPE);
 
@@ -208,7 +201,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected FluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         if (state.get(WATERLOGGED)) {
             return Fluids.WATER.getStill(false);
         }
@@ -225,15 +218,15 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     }
 
     @Override
-    public boolean canFillWithFluid(@Nullable PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
         if (isDoubleVerticalSlab(state)) {
-            return Waterloggable.super.canFillWithFluid(player, world, pos, state, fluid);
+            return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
         }
         return false;
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -241,7 +234,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return switch (type) {
             case LAND, AIR -> false;
             case WATER -> state.getFluidState().isIn(FluidTags.WATER);
