@@ -124,19 +124,51 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
         }
 
 
-        if (direction == Direction.SOUTH && ctx.getHitPos().z - (double)blockPos.getZ() <= 0.5) {
+        if (direction == Direction.SOUTH) {
+            if (xPos < 0.333) {
+                return blockState2.with(TYPE, VerticalSlabType.LEFT);
+            }
+
+            if (xPos > 0.666) {
+                return blockState2.with(TYPE, VerticalSlabType.RIGHT);
+            }
+
             return blockState2.with(TYPE, VerticalSlabType.FRONT);
         }
 
-        if (direction == Direction.NORTH || (direction == Direction.UP || direction == Direction.DOWN) && ctx.getHitPos().z - (double) blockPos.getZ() > 0.5) {
+        if (direction == Direction.NORTH) {
+            if (xPos < 0.333) {
+                return blockState2.with(TYPE, VerticalSlabType.LEFT);
+            }
+
+            if (xPos > 0.666) {
+                return blockState2.with(TYPE, VerticalSlabType.RIGHT);
+            }
+
             return blockState2.with(TYPE, VerticalSlabType.BACK);
         }
 
-        if (direction == Direction.WEST || (direction == Direction.UP || direction == Direction.DOWN) && ctx.getHitPos().x - (double) blockPos.getX() > 0.5) {
+        if (direction == Direction.WEST) {
+            if (zPos < 0.333) {
+                return blockState2.with(TYPE, VerticalSlabType.FRONT);
+            }
+
+            if (zPos > 0.666) {
+                return blockState2.with(TYPE, VerticalSlabType.BACK);
+            }
+
             return blockState2.with(TYPE, VerticalSlabType.RIGHT);
         }
 
-        if (direction == Direction.EAST || (direction == Direction.UP || direction == Direction.DOWN) && ctx.getHitPos().x - (double) blockPos.getX() <= 0.5) {
+        if (direction == Direction.EAST) {
+            if (zPos < 0.333) {
+                return blockState2.with(TYPE, VerticalSlabType.FRONT);
+            }
+
+            if (zPos > 0.666) {
+                return blockState2.with(TYPE, VerticalSlabType.BACK);
+            }
+
             return blockState2.with(TYPE, VerticalSlabType.LEFT);
         }
 

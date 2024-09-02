@@ -1,0 +1,8 @@
+{
+  "parent": "nemos-vertical-slabs:block/parent/vertical_slab_left",
+  "textures": {
+    "bottom": "minecraft:block/cherry_planks",
+    "side": "minecraft:block/cherry_planks",
+    "top": "minecraft:block/cherry_planks"
+  }
+}
