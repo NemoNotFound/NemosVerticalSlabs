@@ -2,7 +2,7 @@
   "parent": "nemos-vertical-slabs:block/parent/vertical_slab_left",
   "textures": {
     "bottom": "minecraft:block/smooth_stone",
-    "side": "minecraft:block/smooth_stone",
+    "side": "minecraft:block/smooth_stone_slab_side",
     "top": "minecraft:block/smooth_stone"
   }
 }

@@ -36,6 +36,8 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
     protected static final VoxelShape LEFT_SHAPE = Block.createCuboidShape(0, 0, 0, 8, 16, 16);
     protected static final VoxelShape RIGHT_SHAPE = Block.createCuboidShape(8, 0, 0, 16, 16, 16);
     protected static final VoxelShape BACK_SHAPE = Block.createCuboidShape(0, 0, 8, 16, 16, 16);
+    private static final double leftArea = 0.333;
+    private static final double rightArea = 0.666;
 
     public MapCodec<? extends VerticalSlabBlock> getCodec() {
         return CODEC;
@@ -69,7 +71,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
         };
 
     }
-//TODO: REFACTORING
+
     @Override
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -81,98 +83,75 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
         }
 
         FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
-        BlockState blockState2 = this.getDefaultState().with(TYPE, VerticalSlabType.BACK).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+        BlockState newblockState = this.getDefaultState().with(TYPE, VerticalSlabType.BACK).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         Direction direction = ctx.getSide();
 
         double zPos = ctx.getHitPos().z - (double)blockPos.getZ();
         double xPos = ctx.getHitPos().x - (double) blockPos.getX();
 
-        if ((direction == Direction.UP || direction == Direction.DOWN) && zPos > 0.5) {
-            double diffZ = 1 - zPos;
+        if (direction == Direction.UP || direction == Direction.DOWN) {
+            VerticalSlabType type = getVerticalSlabType(zPos, xPos);
 
-            if (xPos > 0.5) {
-                double diffX = 1 - xPos;
-
-                if (diffX > diffZ) {
-                    return blockState2.with(TYPE, VerticalSlabType.BACK);
-                } else {
-                    return blockState2.with(TYPE, VerticalSlabType.RIGHT);
-                }
-            } else {
-                if (xPos > diffZ) {
-                    return blockState2.with(TYPE, VerticalSlabType.BACK);
-                } else {
-                    return blockState2.with(TYPE, VerticalSlabType.LEFT);
-                }
-            }
-        } else if ((direction == Direction.UP || direction == Direction.DOWN) && zPos <= 0.5) {
-            if (xPos > 0.5) {
-                double diffX = 1 - xPos;
-
-                if (diffX > zPos) {
-                    return blockState2.with(TYPE, VerticalSlabType.FRONT);
-                } else {
-                    return blockState2.with(TYPE, VerticalSlabType.RIGHT);
-                }
-            } else {
-                if (xPos > zPos) {
-                    return blockState2.with(TYPE, VerticalSlabType.FRONT);
-                } else {
-                    return blockState2.with(TYPE, VerticalSlabType.LEFT);
-                }
-            }
+            return newblockState.with(TYPE, type);
         }
-
 
         if (direction == Direction.SOUTH) {
-            if (xPos < 0.333) {
-                return blockState2.with(TYPE, VerticalSlabType.LEFT);
-            }
-
-            if (xPos > 0.666) {
-                return blockState2.with(TYPE, VerticalSlabType.RIGHT);
-            }
-
-            return blockState2.with(TYPE, VerticalSlabType.FRONT);
+            return getBlockStateForXPos(xPos, newblockState, VerticalSlabType.FRONT);
+        } else if (direction == Direction.NORTH) {
+            return getBlockStateForXPos(xPos, newblockState, VerticalSlabType.BACK);
+        } else if (direction == Direction.WEST) {
+            return getBlockStateForZPos(zPos, newblockState, VerticalSlabType.RIGHT);
+        } else if (direction == Direction.EAST) {
+            return getBlockStateForZPos(zPos, newblockState, VerticalSlabType.LEFT);
         }
 
-        if (direction == Direction.NORTH) {
-            if (xPos < 0.333) {
-                return blockState2.with(TYPE, VerticalSlabType.LEFT);
-            }
+        return newblockState;
+    }
 
-            if (xPos > 0.666) {
-                return blockState2.with(TYPE, VerticalSlabType.RIGHT);
-            }
+    private static VerticalSlabType getVerticalSlabType(double zPos, double xPos) {
+        double diffZ = 1 - zPos;
+        double diffX = 1 - xPos;
+        VerticalSlabType type;
 
-            return blockState2.with(TYPE, VerticalSlabType.BACK);
+        if (zPos > 0.5) {
+            if (xPos > 0.5) {
+                type = diffX > diffZ ? VerticalSlabType.BACK : VerticalSlabType.RIGHT;
+            } else {
+                type = xPos > diffZ ? VerticalSlabType.BACK : VerticalSlabType.LEFT;
+            }
+        } else {
+            if (xPos > 0.5) {
+                type = diffX > zPos ? VerticalSlabType.FRONT : VerticalSlabType.RIGHT;
+            } else {
+                type = xPos > zPos ? VerticalSlabType.FRONT : VerticalSlabType.LEFT;
+            }
         }
 
-        if (direction == Direction.WEST) {
-            if (zPos < 0.333) {
-                return blockState2.with(TYPE, VerticalSlabType.FRONT);
-            }
+        return type;
+    }
 
-            if (zPos > 0.666) {
-                return blockState2.with(TYPE, VerticalSlabType.BACK);
-            }
-
-            return blockState2.with(TYPE, VerticalSlabType.RIGHT);
+    private BlockState getBlockStateForXPos(double xPos, BlockState blockState, VerticalSlabType defaultSlabType) {
+        if (xPos < leftArea) {
+            return blockState.with(TYPE, VerticalSlabType.LEFT);
         }
 
-        if (direction == Direction.EAST) {
-            if (zPos < 0.333) {
-                return blockState2.with(TYPE, VerticalSlabType.FRONT);
-            }
-
-            if (zPos > 0.666) {
-                return blockState2.with(TYPE, VerticalSlabType.BACK);
-            }
-
-            return blockState2.with(TYPE, VerticalSlabType.LEFT);
+        if (xPos > rightArea) {
+            return blockState.with(TYPE, VerticalSlabType.RIGHT);
         }
 
-        return blockState2;
+        return blockState.with(TYPE, defaultSlabType);
+    }
+
+    private BlockState getBlockStateForZPos(double zPos, BlockState blockState, VerticalSlabType defaultSlabType) {
+        if (zPos < leftArea) {
+            return blockState.with(TYPE, VerticalSlabType.FRONT);
+        }
+
+        if (zPos > rightArea) {
+            return blockState.with(TYPE, VerticalSlabType.BACK);
+        }
+
+        return blockState.with(TYPE, defaultSlabType);
     }
 
     @Override
