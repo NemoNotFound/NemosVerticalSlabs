@@ -69,7 +69,7 @@ public class VerticalSlabBlock extends Block implements Waterloggable {
         };
 
     }
-
+//TODO: REFACTORING
     @Override
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {

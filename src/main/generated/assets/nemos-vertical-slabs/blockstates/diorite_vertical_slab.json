@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=back": {
+      "model": "nemos-vertical-slabs:block/diorite_vertical_slab_back"
+    },
+    "type=double": {
+      "model": "minecraft:block/diorite"
+    },
+    "type=front": {
+      "model": "nemos-vertical-slabs:block/diorite_vertical_slab"
+    },
+    "type=left": {
+      "model": "nemos-vertical-slabs:block/diorite_vertical_slab_left"
+    },
+    "type=right": {
+      "model": "nemos-vertical-slabs:block/diorite_vertical_slab_right"
+    }
+  }
+}
