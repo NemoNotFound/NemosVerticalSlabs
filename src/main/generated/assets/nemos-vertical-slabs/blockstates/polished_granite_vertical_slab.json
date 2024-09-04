@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=back": {
+      "model": "nemos-vertical-slabs:block/polished_granite_vertical_slab_back"
+    },
+    "type=double": {
+      "model": "minecraft:block/polished_granite"
+    },
+    "type=front": {
+      "model": "nemos-vertical-slabs:block/polished_granite_vertical_slab"
+    },
+    "type=left": {
+      "model": "nemos-vertical-slabs:block/polished_granite_vertical_slab_left"
+    },
+    "type=right": {
+      "model": "nemos-vertical-slabs:block/polished_granite_vertical_slab_right"
+    }
+  }
+}

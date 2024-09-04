@@ -1,7 +1,13 @@
-# Changelog - v1.0
+# Changelog - v1.1
 
 ## Additions
-- Added wooden vertical slabs
+- Added vertical slabs for all missing slab types
+
+## Fixes
+- Two slabs (full block) always have oak planks textures
+
+## Changes
+- Update mod icon
 
 ### Downloads
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-vertical-slabs) <br>

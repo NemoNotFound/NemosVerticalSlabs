@@ -4,7 +4,7 @@
       "model": "nemos-vertical-slabs:block/bamboo_mosaic_vertical_slab_back"
     },
     "type=double": {
-      "model": "minecraft:block/oak_planks"
+      "model": "minecraft:block/bamboo_mosaic"
     },
     "type=front": {
       "model": "nemos-vertical-slabs:block/bamboo_mosaic_vertical_slab"

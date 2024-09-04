@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:cut_copper"
+  },
+  "result": "nemos-vertical-slabs:cut_copper_vertical_slab"
+}

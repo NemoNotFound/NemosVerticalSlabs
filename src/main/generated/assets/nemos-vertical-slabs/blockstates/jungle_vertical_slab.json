@@ -4,7 +4,7 @@
       "model": "nemos-vertical-slabs:block/jungle_vertical_slab_back"
     },
     "type=double": {
-      "model": "minecraft:block/oak_planks"
+      "model": "minecraft:block/jungle_planks"
     },
     "type=front": {
       "model": "nemos-vertical-slabs:block/jungle_vertical_slab"
