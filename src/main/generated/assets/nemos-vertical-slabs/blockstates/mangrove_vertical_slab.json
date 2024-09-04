@@ -4,7 +4,7 @@
       "model": "nemos-vertical-slabs:block/mangrove_vertical_slab_back"
     },
     "type=double": {
-      "model": "minecraft:block/oak_planks"
+      "model": "minecraft:block/mangrove_planks"
     },
     "type=front": {
       "model": "nemos-vertical-slabs:block/mangrove_vertical_slab"

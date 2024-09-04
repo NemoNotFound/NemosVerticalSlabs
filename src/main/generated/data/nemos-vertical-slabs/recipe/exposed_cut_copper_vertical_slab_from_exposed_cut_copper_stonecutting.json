@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:exposed_cut_copper"
+  },
+  "result": {
+    "count": 1,
+    "id": "nemos-vertical-slabs:exposed_cut_copper_vertical_slab"
+  }
+}

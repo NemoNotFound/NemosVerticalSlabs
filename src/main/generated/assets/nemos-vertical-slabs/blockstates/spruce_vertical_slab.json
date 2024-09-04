@@ -4,7 +4,7 @@
       "model": "nemos-vertical-slabs:block/spruce_vertical_slab_back"
     },
     "type=double": {
-      "model": "minecraft:block/oak_planks"
+      "model": "minecraft:block/spruce_planks"
     },
     "type=front": {
       "model": "nemos-vertical-slabs:block/spruce_vertical_slab"
