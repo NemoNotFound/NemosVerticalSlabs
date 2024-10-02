@@ -1,26 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_cut_red_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cut_red_sandstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "nemos-vertical-slabs:cut_red_sandstone_vertical_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wood": {
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:planks"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_wood",
+      "has_cut_red_sandstone",
       "has_the_recipe"
     ]
   ],

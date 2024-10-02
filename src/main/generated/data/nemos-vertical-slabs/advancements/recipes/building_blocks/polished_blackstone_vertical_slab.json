@@ -1,26 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_polished_blackstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_blackstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "nemos-vertical-slabs:polished_blackstone_vertical_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wood": {
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:planks"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_wood",
+      "has_polished_blackstone",
       "has_the_recipe"
     ]
   ],
