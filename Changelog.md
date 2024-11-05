@@ -1,7 +1,7 @@
-# Changelog - v1.1.1
+# Changelog - v1.1.2
 
-## Changes
-- Updated recipe criteria
+## Additions
+- Added woodcutting recipes
 
 ### Downloads
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-vertical-slabs) <br>
