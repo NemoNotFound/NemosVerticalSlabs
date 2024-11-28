@@ -24,9 +24,17 @@ repositories {
 	}
 }
 
-fabricApi {
-	configureDataGeneration {
-		modId = "${archives_base_name}"
+loom {
+	runs {
+		datagen {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=${archives_base_name}"
+
+			runDir "build/datagen"
+		}
 	}
 }
 

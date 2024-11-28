@@ -3,11 +3,11 @@ package com.nemonotfound.nemosverticalslabs.datagen;
 import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
 import com.nemonotfound.nemosverticalslabs.block.enums.VerticalSlabType;
 import com.nemonotfound.nemosverticalslabs.property.ModProperties;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 
 public class ModelProvider extends FabricModelProvider {
@@ -85,6 +85,7 @@ public class ModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
     }
 
     private void registerSmoothStone(BlockStateModelGenerator blockStateModelGenerator) {
