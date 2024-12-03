@@ -25,6 +25,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DARK_OAK_VERTICAL_SLAB)
                 .add(ModBlocks.MANGROVE_VERTICAL_SLAB)
                 .add(ModBlocks.CHERRY_VERTICAL_SLAB)
+                .add(ModBlocks.PALE_OAK_VERTICAL_SLAB)
                 .add(ModBlocks.BAMBOO_VERTICAL_SLAB)
                 .add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB)
                 .add(ModBlocks.CRIMSON_VERTICAL_SLAB)

@@ -23,6 +23,7 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DARK_OAK_VERTICAL_SLAB, "Dark Oak Vertical Slab");
         translationBuilder.add(ModBlocks.MANGROVE_VERTICAL_SLAB, "Mangrove Vertical Slab");
         translationBuilder.add(ModBlocks.CHERRY_VERTICAL_SLAB, "Cherry Vertical Slab");
+        translationBuilder.add(ModBlocks.PALE_OAK_VERTICAL_SLAB, "Pale Oak Vertical Slab");
         translationBuilder.add(ModBlocks.BAMBOO_VERTICAL_SLAB, "Bamboo Vertical Slab");
         translationBuilder.add(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB, "Bamboo Mosaic Vertical Slab");
         translationBuilder.add(ModBlocks.CRIMSON_VERTICAL_SLAB, "Crimson Vertical Slab");
@@ -73,6 +74,6 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB, "Waxed Cut Copper Vertical Slab");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Waxed Exposed Cut Copper Vertical Slab");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Waxed Weathered Cut Copper Vertical Slab");
-        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Waxed Oxidized Cut Copper Vertical Slab");;
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Waxed Oxidized Cut Copper Vertical Slab");
     }
 }

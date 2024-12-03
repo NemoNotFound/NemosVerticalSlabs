@@ -1,0 +1,9 @@
+{
+  "type": "nemos_woodcutter:woodcutting",
+  "ingredient": "#minecraft:pale_oak_logs",
+  "inputCount": 1,
+  "result": {
+    "count": 8,
+    "id": "nemos-vertical-slabs:pale_oak_vertical_slab"
+  }
+}

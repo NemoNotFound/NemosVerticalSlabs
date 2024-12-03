@@ -33,6 +33,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         this.addDrop(ModBlocks.DARK_OAK_VERTICAL_SLAB, slabDrops(ModBlocks.DARK_OAK_VERTICAL_SLAB));
         this.addDrop(ModBlocks.MANGROVE_VERTICAL_SLAB, slabDrops(ModBlocks.MANGROVE_VERTICAL_SLAB));
         this.addDrop(ModBlocks.CHERRY_VERTICAL_SLAB, slabDrops(ModBlocks.CHERRY_VERTICAL_SLAB));
+        this.addDrop(ModBlocks.PALE_OAK_VERTICAL_SLAB, slabDrops(ModBlocks.PALE_OAK_VERTICAL_SLAB));
         this.addDrop(ModBlocks.BAMBOO_VERTICAL_SLAB, slabDrops(ModBlocks.BAMBOO_VERTICAL_SLAB));
         this.addDrop(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB, slabDrops(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB));
         this.addDrop(ModBlocks.CRIMSON_VERTICAL_SLAB, slabDrops(ModBlocks.CRIMSON_VERTICAL_SLAB));

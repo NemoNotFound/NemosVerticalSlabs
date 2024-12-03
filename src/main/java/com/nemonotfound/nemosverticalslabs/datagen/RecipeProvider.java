@@ -32,6 +32,7 @@ public class RecipeProvider extends FabricRecipeProvider {
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.DARK_OAK_VERTICAL_SLAB, Items.DARK_OAK_PLANKS);
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MANGROVE_VERTICAL_SLAB, Items.MANGROVE_PLANKS);
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.CHERRY_VERTICAL_SLAB, Items.CHERRY_PLANKS);
+                createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.PALE_OAK_VERTICAL_SLAB, Items.PALE_OAK_PLANKS);
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.BAMBOO_VERTICAL_SLAB, Items.BAMBOO_PLANKS);
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.BAMBOO_MOSAIC_VERTICAL_SLAB, Items.BAMBOO_MOSAIC);
                 createWoodenVerticalSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.CRIMSON_VERTICAL_SLAB, Items.CRIMSON_PLANKS);

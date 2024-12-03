@@ -33,6 +33,7 @@ public class WoodcuttingRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, DARK_OAK_PLANKS, ModItems.DARK_OAK_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, MANGROVE_PLANKS, ModItems.MANGROVE_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, CHERRY_PLANKS, ModItems.CHERRY_VERTICAL_SLAB, 2);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, PALE_OAK_PLANKS, ModItems.PALE_OAK_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, BAMBOO_PLANKS, ModItems.BAMBOO_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, BAMBOO_MOSAIC, ModItems.BAMBOO_MOSAIC_VERTICAL_SLAB, 2);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, CRIMSON_PLANKS, ModItems.CRIMSON_VERTICAL_SLAB, 2);
@@ -46,6 +47,7 @@ public class WoodcuttingRecipeProvider extends FabricRecipeProvider {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.DARK_OAK_LOGS, "has_dark_oak_logs", ModItems.DARK_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.MANGROVE_LOGS, "has_mangrove_logs", ModItems.MANGROVE_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.CHERRY_LOGS, "has_cherry_logs", ModItems.CHERRY_VERTICAL_SLAB, 8);
+                createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.PALE_OAK_LOGS, "has_pale_oak_logs", ModItems.PALE_OAK_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.BAMBOO_BLOCKS, "has_bamboo_blocks", ModItems.BAMBOO_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.CRIMSON_STEMS, "has_crimson_stems", ModItems.CRIMSON_VERTICAL_SLAB, 8);
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ItemTags.WARPED_STEMS, "has_warped_stems", ModItems.WARPED_VERTICAL_SLAB, 8);

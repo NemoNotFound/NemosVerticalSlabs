@@ -29,8 +29,8 @@ public class ModBlocks {
             VerticalSlabBlock::new, AbstractBlock.Settings.copy(DARK_OAK_SLAB).nonOpaque());
     public static final Block MANGROVE_VERTICAL_SLAB = register("mangrove_vertical_slab",
             VerticalSlabBlock::new, AbstractBlock.Settings.copy(MANGROVE_SLAB).nonOpaque());
-    public static final Block CHERRY_VERTICAL_SLAB = register("cherry_vertical_slab",
-            VerticalSlabBlock::new, AbstractBlock.Settings.copy(CHERRY_SLAB).nonOpaque());
+    public static final Block CHERRY_VERTICAL_SLAB = register("cherry_vertical_slab", VerticalSlabBlock::new, AbstractBlock.Settings.copy(CHERRY_SLAB).nonOpaque());
+    public static final Block PALE_OAK_VERTICAL_SLAB = register("pale_oak_vertical_slab", VerticalSlabBlock::new, AbstractBlock.Settings.copy(PALE_OAK_SLAB).nonOpaque());
     public static final Block BAMBOO_VERTICAL_SLAB = register("bamboo_vertical_slab",
             VerticalSlabBlock::new, AbstractBlock.Settings.copy(BAMBOO_SLAB).nonOpaque());
     public static final Block BAMBOO_MOSAIC_VERTICAL_SLAB = register("bamboo_mosaic_vertical_slab",

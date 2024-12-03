@@ -16,6 +16,7 @@ public class ModItems {
     public static final Item DARK_OAK_VERTICAL_SLAB = Items.register(ModBlocks.DARK_OAK_VERTICAL_SLAB);
     public static final Item MANGROVE_VERTICAL_SLAB = Items.register(ModBlocks.MANGROVE_VERTICAL_SLAB);
     public static final Item CHERRY_VERTICAL_SLAB = Items.register(ModBlocks.CHERRY_VERTICAL_SLAB);
+    public static final Item PALE_OAK_VERTICAL_SLAB = Items.register(ModBlocks.PALE_OAK_VERTICAL_SLAB);
     public static final Item BAMBOO_VERTICAL_SLAB = Items.register(ModBlocks.BAMBOO_VERTICAL_SLAB);
     public static final Item BAMBOO_MOSAIC_VERTICAL_SLAB = Items.register(ModBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB);
     public static final Item CRIMSON_VERTICAL_SLAB = Items.register(ModBlocks.CRIMSON_VERTICAL_SLAB);

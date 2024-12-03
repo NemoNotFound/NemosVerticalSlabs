@@ -1,4 +1,4 @@
-# Changelog - v1.1.2
+# Changelog - v1.2
 
 ## Additions
-- Added woodcutting recipes
+- Added pale oak vertical slab
