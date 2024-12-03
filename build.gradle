@@ -24,6 +24,12 @@ repositories {
 	}
 }
 
+fabricApi {
+	configureDataGeneration {
+		modId = "${archives_base_name}"
+	}
+}
+
 loom {
 	runs {
 		datagen {
