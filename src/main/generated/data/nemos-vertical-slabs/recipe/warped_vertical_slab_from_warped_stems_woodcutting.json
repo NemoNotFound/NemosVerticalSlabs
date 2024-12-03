@@ -1,5 +1,5 @@
 {
-  "type": "nemos-woodcutter:woodcutting",
+  "type": "nemos_woodcutter:woodcutting",
   "ingredient": "#minecraft:warped_stems",
   "inputCount": 1,
   "result": {

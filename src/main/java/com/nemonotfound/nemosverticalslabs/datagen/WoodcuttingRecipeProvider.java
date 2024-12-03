@@ -1,7 +1,7 @@
 package com.nemonotfound.nemosverticalslabs.datagen;
 
 import com.nemonotfound.nemosverticalslabs.item.ModItems;
-import com.nemonotfound.nemoswoodcutter.datagen.WoodcutterRecipeGenerator;
+import com.nemonotfound.nemos.woodcutter.datagen.WoodcutterRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -14,15 +14,15 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.block.Blocks.*;
 
-public class WoodcuttingRecipeGenerator extends FabricRecipeProvider {
+public class WoodcuttingRecipeProvider extends FabricRecipeProvider {
 
-    public WoodcuttingRecipeGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public WoodcuttingRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
-        return new WoodcutterRecipeGenerator(wrapperLookup, recipeExporter) {
+        return new WoodcutterRecipeProvider(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
                 createWoodcuttingRecipe(RecipeCategory.BUILDING_BLOCKS, OAK_PLANKS, ModItems.OAK_VERTICAL_SLAB, 2);

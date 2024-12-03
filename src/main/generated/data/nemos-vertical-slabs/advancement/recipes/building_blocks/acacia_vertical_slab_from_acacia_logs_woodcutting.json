@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:acacia_vertical_slab_from_acacia_logs_woodcutting"
+        "recipe": "nemos_woodcutter:acacia_vertical_slab_from_acacia_logs_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:acacia_vertical_slab_from_acacia_logs_woodcutting"
+      "nemos_woodcutter:acacia_vertical_slab_from_acacia_logs_woodcutting"
     ]
   }
 }

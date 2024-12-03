@@ -1,6 +1,5 @@
 package com.nemonotfound.nemosverticalslabs.item;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;

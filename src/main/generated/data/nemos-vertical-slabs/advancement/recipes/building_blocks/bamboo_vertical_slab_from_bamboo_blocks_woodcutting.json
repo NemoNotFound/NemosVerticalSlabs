@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:bamboo_vertical_slab_from_bamboo_blocks_woodcutting"
+        "recipe": "nemos_woodcutter:bamboo_vertical_slab_from_bamboo_blocks_woodcutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bamboo_vertical_slab_from_bamboo_blocks_woodcutting"
+      "nemos_woodcutter:bamboo_vertical_slab_from_bamboo_blocks_woodcutting"
     ]
   }
 }
