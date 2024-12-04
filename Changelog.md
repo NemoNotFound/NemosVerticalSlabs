@@ -1,4 +1,4 @@
-# Changelog - v1.2
+# Changelog - v1.2.1
 
-## Additions
-- Added pale oak vertical slab
+## Changes
+- Stonecutting recipes now return 2 vertical slabs

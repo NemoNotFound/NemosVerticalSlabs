@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:diorite",
   "result": {
-    "count": 1,
+    "count": 2,
     "id": "nemos-vertical-slabs:diorite_vertical_slab"
   }
 }
