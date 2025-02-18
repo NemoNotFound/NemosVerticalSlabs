@@ -1,10 +1,7 @@
-package com.nemonotfound.nemosverticalslabs;
+package com.nemonotfound.nemos.vertical.slabs;
 
-import com.nemonotfound.nemosverticalslabs.datagen.BlockTagProvider;
-import com.nemonotfound.nemosverticalslabs.datagen.LootTableProvider;
-import com.nemonotfound.nemosverticalslabs.datagen.RecipeProvider;
-import com.nemonotfound.nemosverticalslabs.datagen.langdatagen.EnglishLanguageProvider;
-import com.nemonotfound.nemosverticalslabs.datagen.ModelProvider;
+import com.nemonotfound.nemos.vertical.slabs.datagen.*;
+import com.nemonotfound.nemos.vertical.slabs.datagen.langdatagen.EnglishLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 

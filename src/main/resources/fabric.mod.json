@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs"
+			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs"
 		],
 		"client": [
-			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabsClient"
+			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabsClient"
 		],
 		"fabric-datagen": [
-			"com.nemonotfound.nemosverticalslabs.NemosVerticalSlabsDataGenerator"
+			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabsDataGenerator"
 		]
 	},
 	"depends": {
