@@ -33,6 +33,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ACACIA_VERTICAL_SLAB);
                     entries.add(ModItems.DARK_OAK_VERTICAL_SLAB);
                     entries.add(ModItems.MANGROVE_VERTICAL_SLAB);
+                    entries.add(ModItems.CHERRY_VERTICAL_SLAB);
                     entries.add(ModItems.PALE_OAK_VERTICAL_SLAB);
                     entries.add(ModItems.BAMBOO_VERTICAL_SLAB);
                     entries.add(ModItems.BAMBOO_MOSAIC_VERTICAL_SLAB);

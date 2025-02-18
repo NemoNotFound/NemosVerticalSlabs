@@ -1,4 +1,5 @@
-# Changelog - v1.2.1
+# Changelog - v1.2.2
 
-## Changes
-- Stonecutting recipes now return 2 vertical slabs
+## Fixes
+- Cherry vertical slabs aren't shown in creative inventory
+- Vertical slabs have an invisible side, if a block is on the west or east
