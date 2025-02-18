@@ -1,6 +1,6 @@
-package com.nemonotfound.nemosverticalslabs;
+package com.nemonotfound.nemos.vertical.slabs;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -68,6 +68,5 @@ public class NemosVerticalSlabsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, RenderLayer.getCutout());
-        ;
     }
 }

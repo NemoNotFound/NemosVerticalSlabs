@@ -1,19 +1,10 @@
-package com.nemonotfound.nemosverticalslabs.item;
+package com.nemonotfound.nemos.vertical.slabs.item;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
-import com.nemonotfound.nemosverticalslabs.block.VerticalSlabBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.MOD_ID;
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.log;
-import static net.minecraft.block.Blocks.*;
+import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.log;
 
 public class ModItems {
 

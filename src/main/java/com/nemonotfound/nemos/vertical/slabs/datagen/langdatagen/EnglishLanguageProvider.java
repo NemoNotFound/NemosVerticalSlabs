@@ -1,6 +1,6 @@
-package com.nemonotfound.nemosverticalslabs.datagen.langdatagen;
+package com.nemonotfound.nemos.vertical.slabs.datagen.langdatagen;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -73,6 +73,6 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB, "Waxed Cut Copper Vertical Slab");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, "Waxed Exposed Cut Copper Vertical Slab");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, "Waxed Weathered Cut Copper Vertical Slab");
-        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Waxed Oxidized Cut Copper Vertical Slab");;
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, "Waxed Oxidized Cut Copper Vertical Slab");
     }
 }
