@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:tuff",
+  "result": {
+    "count": 1,
+    "id": "nemos-vertical-slabs:polished_tuff_vertical_slab"
+  }
+}

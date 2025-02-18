@@ -1,9 +1,0 @@
-{
-  "type": "nemos-woodcutter:woodcutting",
-  "ingredient": "minecraft:birch_planks",
-  "inputCount": 1,
-  "result": {
-    "count": 2,
-    "id": "nemos-vertical-slabs:birch_vertical_slab"
-  }
-}
