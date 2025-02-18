@@ -1,7 +1,7 @@
-package com.nemonotfound.nemosverticalslabs.block;
+package com.nemonotfound.nemos.vertical.slabs.block;
 
-import com.nemonotfound.nemosverticalslabs.block.enums.VerticalSlabType;
-import com.nemonotfound.nemosverticalslabs.property.ModProperties;
+import com.nemonotfound.nemos.vertical.slabs.block.enums.VerticalSlabType;
+import com.nemonotfound.nemos.vertical.slabs.property.ModProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;

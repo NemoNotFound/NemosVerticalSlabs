@@ -1,8 +1,5 @@
-# Changelog - v1.1.1
+# Changelog - v1.2.2
 
-## Changes
-- Updated recipe criteria
-
-### Downloads
-[CurseForge](https://www.curseforge.com/minecraft/mc-mods/nemos-vertical-slabs) <br>
-[Modrinth](https://modrinth.com/mod/nemos-vertical-slabs)
+## Fixes
+- Cherry vertical slabs aren't shown in creative inventory
+- Vertical slabs have an invisible side, if a block is on the west or east

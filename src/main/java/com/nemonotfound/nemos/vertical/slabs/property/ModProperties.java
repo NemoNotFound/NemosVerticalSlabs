@@ -1,6 +1,6 @@
-package com.nemonotfound.nemosverticalslabs.property;
+package com.nemonotfound.nemos.vertical.slabs.property;
 
-import com.nemonotfound.nemosverticalslabs.block.enums.VerticalSlabType;
+import com.nemonotfound.nemos.vertical.slabs.block.enums.VerticalSlabType;
 import net.minecraft.state.property.EnumProperty;
 
 public class ModProperties {

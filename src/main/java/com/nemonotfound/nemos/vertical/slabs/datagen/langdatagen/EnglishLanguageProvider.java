@@ -1,6 +1,6 @@
-package com.nemonotfound.nemosverticalslabs.datagen.langdatagen;
+package com.nemonotfound.nemos.vertical.slabs.datagen.langdatagen;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
