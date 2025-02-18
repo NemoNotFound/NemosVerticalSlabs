@@ -1,9 +1,0 @@
-{
-  "type": "nemos_woodcutter:woodcutting",
-  "ingredient": "#minecraft:dark_oak_logs",
-  "inputCount": 1,
-  "result": {
-    "count": 8,
-    "id": "nemos-vertical-slabs:dark_oak_vertical_slab"
-  }
-}

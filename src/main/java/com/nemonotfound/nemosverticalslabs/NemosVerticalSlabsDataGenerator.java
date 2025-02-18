@@ -16,6 +16,5 @@ public class NemosVerticalSlabsDataGenerator implements DataGeneratorEntrypoint 
 		pack.addProvider(BlockTagProvider::new);
 		pack.addProvider(LootTableProvider::new);
 		pack.addProvider(RecipeProvider::new);
-		pack.addProvider(WoodcuttingRecipeProvider::new);
 	}
 }

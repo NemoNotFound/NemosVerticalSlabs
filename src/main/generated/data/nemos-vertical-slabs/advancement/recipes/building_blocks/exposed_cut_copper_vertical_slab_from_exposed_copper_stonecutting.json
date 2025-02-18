@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_andesite": {
+    "has_exposed_copper": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:andesite"
+            "items": "minecraft:exposed_copper"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos-vertical-slabs:polished_andesite_vertical_slab"
+        "recipe": "minecraft:exposed_cut_copper_vertical_slab_from_exposed_copper_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_andesite"
+      "has_exposed_copper"
     ]
   ],
   "rewards": {
     "recipes": [
-      "nemos-vertical-slabs:polished_andesite_vertical_slab"
+      "minecraft:exposed_cut_copper_vertical_slab_from_exposed_copper_stonecutting"
     ]
   }
 }

@@ -1,9 +1,0 @@
-{
-  "type": "nemos_woodcutter:woodcutting",
-  "ingredient": "#minecraft:spruce_logs",
-  "inputCount": 1,
-  "result": {
-    "count": 8,
-    "id": "nemos-vertical-slabs:spruce_vertical_slab"
-  }
-}
