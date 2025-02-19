@@ -1,4 +1,4 @@
-package com.nemonotfound.nemosverticalslabs.item;
+package com.nemonotfound.nemos.vertical.slabs.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -8,8 +8,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.MOD_ID;
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.log;
+import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.MOD_ID;
+import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.log;
 
 public class ModItemGroups {
 

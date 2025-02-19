@@ -1,4 +1,4 @@
-package com.nemonotfound.nemosverticalslabs.block.enums;
+package com.nemonotfound.nemos.vertical.slabs.block.enums;
 
 import net.minecraft.util.StringIdentifiable;
 

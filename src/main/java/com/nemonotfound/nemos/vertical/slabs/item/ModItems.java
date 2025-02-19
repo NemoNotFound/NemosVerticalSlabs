@@ -1,10 +1,10 @@
-package com.nemonotfound.nemosverticalslabs.item;
+package com.nemonotfound.nemos.vertical.slabs.item;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.log;
+import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.log;
 
 public class ModItems {
 

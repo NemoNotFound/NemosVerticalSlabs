@@ -1,4 +1,4 @@
-package com.nemonotfound.nemosverticalslabs.datagen;
+package com.nemonotfound.nemos.vertical.slabs.datagen;
 
 import net.minecraft.client.data.Model;
 import net.minecraft.client.data.TextureKey;
@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
-import static com.nemonotfound.nemosverticalslabs.NemosVerticalSlabs.MOD_ID;
+import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.MOD_ID;
 
 public class ModModels {
 

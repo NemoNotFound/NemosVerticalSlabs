@@ -1,8 +1,8 @@
-package com.nemonotfound.nemosverticalslabs;
+package com.nemonotfound.nemos.vertical.slabs;
 
-import com.nemonotfound.nemosverticalslabs.block.ModBlocks;
-import com.nemonotfound.nemosverticalslabs.item.ModItemGroups;
-import com.nemonotfound.nemosverticalslabs.item.ModItems;
+import com.nemonotfound.nemos.vertical.slabs.block.ModBlocks;
+import com.nemonotfound.nemos.vertical.slabs.item.ModItemGroups;
+import com.nemonotfound.nemos.vertical.slabs.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

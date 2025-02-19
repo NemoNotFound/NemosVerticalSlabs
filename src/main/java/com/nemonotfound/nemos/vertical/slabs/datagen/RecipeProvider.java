@@ -1,6 +1,6 @@
-package com.nemonotfound.nemosverticalslabs.datagen;
+package com.nemonotfound.nemos.vertical.slabs.datagen;
 
-import com.nemonotfound.nemosverticalslabs.item.ModItems;
+import com.nemonotfound.nemos.vertical.slabs.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
