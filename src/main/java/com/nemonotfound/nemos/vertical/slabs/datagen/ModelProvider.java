@@ -8,7 +8,9 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.render.model.json.WeightedVariant;
+
+import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
 
 public class ModelProvider extends FabricModelProvider {
 
@@ -96,13 +98,13 @@ public class ModelProvider extends FabricModelProvider {
                 .put(TextureKey.PARTICLE, TextureMap.getId(Blocks.SMOOTH_STONE));
         TextureMap textureMap2 = TextureMap.sideEnd(TextureMap.getSubId(Blocks.SMOOTH_STONE_SLAB, "_side"), textureMap.getTexture(TextureKey.TOP));
 
-        Identifier modelId = ModModels.VERTICAL_SLAB.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, textureMap, blockStateModelGenerator.modelCollector);
-        Identifier leftModelId = ModModels.VERTICAL_SLAB_LEFT.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_left", textureMap, blockStateModelGenerator.modelCollector);
-        Identifier rightModelId = ModModels.VERTICAL_SLAB_RIGHT.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_right", textureMap, blockStateModelGenerator.modelCollector);
-        Identifier backModelId = ModModels.VERTICAL_SLAB_BACK.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_back", textureMap, blockStateModelGenerator.modelCollector);
-        Identifier fullBlockId = Models.CUBE_COLUMN.uploadWithoutVariant(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_double", textureMap2, blockStateModelGenerator.modelCollector);
+        var weightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, textureMap, blockStateModelGenerator.modelCollector));
+        var leftWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_LEFT.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_left", textureMap, blockStateModelGenerator.modelCollector));
+        var rightWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_RIGHT.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_right", textureMap, blockStateModelGenerator.modelCollector));
+        var backWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_BACK.upload(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_back", textureMap, blockStateModelGenerator.modelCollector));
+        var fullWeightedVariant = createWeightedVariant(Models.CUBE_COLUMN.uploadWithoutVariant(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, "_double", textureMap2, blockStateModelGenerator.modelCollector));
 
-        blockStateModelGenerator.blockStateCollector.accept(createVerticalSlabBlockState(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, modelId, leftModelId, rightModelId, backModelId, fullBlockId));
+        blockStateModelGenerator.blockStateCollector.accept(createVerticalSlabBlockState(ModBlocks.SMOOTH_STONE_VERTICAL_SLAB, weightedVariant, leftWeightedVariant, rightWeightedVariant, backWeightedVariant, fullWeightedVariant));
     }
 
     private void generateVerticalSlabBlockModel(BlockStateModelGenerator blockStateModelGenerator, Block textureBlock, Block block) {
@@ -110,8 +112,9 @@ public class ModelProvider extends FabricModelProvider {
                 .put(TextureKey.SIDE, TextureMap.getId(textureBlock))
                 .put(TextureKey.BOTTOM, TextureMap.getId(textureBlock))
                 .put(TextureKey.PARTICLE, TextureMap.getId(textureBlock));
+        WeightedVariant fullWeightedVariant = createWeightedVariant(ModelIds.getBlockModelId(textureBlock));
 
-        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, textureBlock, block);
+        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, block, fullWeightedVariant);
     }
 
     private void generateVerticalSlabBlockModel(BlockStateModelGenerator blockStateModelGenerator, Block textureBlock, Block fullBlock, String suffix, Block block) {
@@ -123,8 +126,9 @@ public class ModelProvider extends FabricModelProvider {
                 .put(TextureKey.SIDE, TextureMap.getId(textureBlock).withSuffixedPath(sideSuffix))
                 .put(TextureKey.BOTTOM, TextureMap.getId(textureBlock).withSuffixedPath(bottomSuffix))
                 .put(TextureKey.PARTICLE, TextureMap.getId(textureBlock).withSuffixedPath(topSuffix));
+        WeightedVariant fullWeightedVariant = createWeightedVariant(ModelIds.getBlockModelId(fullBlock));
 
-        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, fullBlock, block);
+        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, block, fullWeightedVariant);
     }
 
     private void generateVerticalSlabBlockModelForCutSandstone(BlockStateModelGenerator blockStateModelGenerator, Block textureBlock, Block secondTextureBlock, Block block) {
@@ -132,29 +136,30 @@ public class ModelProvider extends FabricModelProvider {
                 .put(TextureKey.SIDE, TextureMap.getId(textureBlock))
                 .put(TextureKey.BOTTOM, TextureMap.getId(secondTextureBlock).withSuffixedPath(BOTTOM_SUFFIX))
                 .put(TextureKey.PARTICLE, TextureMap.getId(textureBlock));
+        var fullWeightedVariant = createWeightedVariant(ModelIds.getBlockModelId(textureBlock));
 
-        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, textureBlock, block);
+        generateVerticalSlabBlockModel(blockStateModelGenerator, textureMap, block, fullWeightedVariant);
     }
 
-    private void generateVerticalSlabBlockModel(BlockStateModelGenerator blockStateModelGenerator, TextureMap textureMap, Block fullBlock, Block block) {
-        Identifier modelId = ModModels.VERTICAL_SLAB.upload(block, textureMap, blockStateModelGenerator.modelCollector);
-        Identifier leftModelId = ModModels.VERTICAL_SLAB_LEFT.upload(block, "_left", textureMap, blockStateModelGenerator.modelCollector);
-        Identifier rightModelId = ModModels.VERTICAL_SLAB_RIGHT.upload(block, "_right", textureMap, blockStateModelGenerator.modelCollector);
-        Identifier backModelId = ModModels.VERTICAL_SLAB_BACK.upload(block, "_back", textureMap, blockStateModelGenerator.modelCollector);
+    private void generateVerticalSlabBlockModel(BlockStateModelGenerator blockStateModelGenerator, TextureMap textureMap, Block block, WeightedVariant fullWeightedVariant) {
+        var weightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB.upload(block, textureMap, blockStateModelGenerator.modelCollector));
+        var leftWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_LEFT.upload(block, "_left", textureMap, blockStateModelGenerator.modelCollector));
+        var rightWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_RIGHT.upload(block, "_right", textureMap, blockStateModelGenerator.modelCollector));
+        var backWeightedVariant = createWeightedVariant(ModModels.VERTICAL_SLAB_BACK.upload(block, "_back", textureMap, blockStateModelGenerator.modelCollector));
 
-        blockStateModelGenerator.blockStateCollector.accept(createVerticalSlabBlockState(block, modelId, leftModelId, rightModelId, backModelId, TextureMap.getId(fullBlock)));
+        blockStateModelGenerator.blockStateCollector.accept(createVerticalSlabBlockState(block, weightedVariant, leftWeightedVariant, rightWeightedVariant, backWeightedVariant, fullWeightedVariant));
     }
 
-    public static BlockStateSupplier createVerticalSlabBlockState(Block verticalSlabBlock, Identifier modelId,
-                                                                  Identifier leftModelId, Identifier rightModelId, Identifier backModelId, Identifier fullModelId) {
-        return VariantsBlockStateSupplier.create(verticalSlabBlock)
-                .coordinate(
-                        BlockStateVariantMap.create(ModProperties.VERTICAL_SLAB_TYPE)
-                                .register(VerticalSlabType.FRONT, BlockStateVariant.create().put(VariantSettings.MODEL, modelId))
-                                .register(VerticalSlabType.LEFT, BlockStateVariant.create().put(VariantSettings.MODEL, leftModelId))
-                                .register(VerticalSlabType.RIGHT, BlockStateVariant.create().put(VariantSettings.MODEL, rightModelId))
-                                .register(VerticalSlabType.BACK, BlockStateVariant.create().put(VariantSettings.MODEL, backModelId))
-                                .register(VerticalSlabType.DOUBLE, BlockStateVariant.create().put(VariantSettings.MODEL, fullModelId))
+    public static BlockModelDefinitionCreator createVerticalSlabBlockState(Block verticalSlabBlock, WeightedVariant weightedVariant,
+                                                                           WeightedVariant leftWeightedVariant, WeightedVariant rightWeightedVariant, WeightedVariant backWeightedVariant, WeightedVariant fullWeightedVariant) {
+        return VariantsBlockModelDefinitionCreator.of(verticalSlabBlock)
+                .with(
+                        BlockStateVariantMap.models(ModProperties.VERTICAL_SLAB_TYPE)
+                                .register(VerticalSlabType.FRONT, weightedVariant)
+                                .register(VerticalSlabType.LEFT, leftWeightedVariant)
+                                .register(VerticalSlabType.RIGHT, rightWeightedVariant)
+                                .register(VerticalSlabType.BACK, backWeightedVariant)
+                                .register(VerticalSlabType.DOUBLE, fullWeightedVariant)
                 );
     }
 }
