@@ -18,10 +18,6 @@ Support for additional mods may be added in the future. Suggestions are welcome!
 - [CurseForge](https://curseforge.com/minecraft/mc-mods/nemos-vertical-slabs)
 - [Modrinth](https://modrinth.com/mod/nemos-vertical-slabs)
 
-## Third-Party Components
-
-- Uses [MultiLoader‑Template (CC0-1.0)](https://github.com/jaredlll08/MultiLoader-Template) for multiple loader support.
-
 ## Join my Discord!
 
 Join my Discord to meet new people and stay up to date with all of my mods!
