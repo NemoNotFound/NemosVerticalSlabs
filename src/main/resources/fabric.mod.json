@@ -5,21 +5,21 @@
 	"name": "Nemo's Vertical Slabs",
 	"description": "Add vertical slabs to Minecraft!",
 	"authors": [
-		"DevNemo"
+		"Nemo"
 	],
 	"contact": {
 		"homepage": "https://nemonotfound.com",
-		"sources": "https://github.com/NemoOnGH/NemosVerticalSlabs"
+		"sources": "https://github.com/NemoNotFound/NemosVerticalSlabs"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/nemos_vertical_slabs/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.devnemo.nemos.vertical.slabs.NemosVerticalSlabs"
+			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs"
 		],
 		"fabric-datagen": [
-			"com.devnemo.nemos.vertical.slabs.NemosVerticalSlabsDataGenerator"
+			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabsDataGenerator"
 		]
 	},
 	"depends": {
