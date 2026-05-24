@@ -1,4 +1,4 @@
-# Changelog v2.3
+# Changelog v2.3.1
 
 ## Changes
-- Changed placement behaviour to reduce confusion/building mistakes.
+- Internal changes
