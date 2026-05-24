@@ -1,8 +1,8 @@
 package com.nemonotfound.nemos.vertical.slabs.datagen;
 
 import com.nemonotfound.nemos.vertical.slabs.tags.VerticalSlabItemTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -13,9 +13,9 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.nemonotfound.nemos.vertical.slabs.world.item.VerticalSlabItems.*;
 
-public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
+public class ItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
-    public ItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 

@@ -1,6 +1,5 @@
 package com.nemonotfound.nemos.vertical.slabs.world.item;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -12,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.MOD_ID;
+import static net.minecraft.world.item.CreativeModeTab.Row.TOP;
 
 public class VerticalCreativeModeTabs {
 
@@ -271,10 +271,10 @@ public class VerticalCreativeModeTabs {
     }
 
     private static CreativeModeTab register(String title, Item iconItem, List<Item> dispalyItemSuppliers) {
-        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MOD_ID, FabricItemGroup.builder()
+        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MOD_ID, CreativeModeTab.builder(TOP, 0)
                 .title(Component.translatable(title))
                 .icon(() -> new ItemStack(iconItem))
-                .displayItems((parameters, output) -> {
+                .displayItems((_, output) -> {
                     for (Item displayItemSupplier : dispalyItemSuppliers) {
                         output.accept(displayItemSupplier);
                     }

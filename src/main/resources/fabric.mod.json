@@ -19,13 +19,13 @@
 			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs"
 		],
 		"fabric-datagen": [
-			"com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabsDataGenerator"
+			"com.nemonotfound.nemos.vertical.slabs.DataGenerator"
 		]
 	},
 	"depends": {
 		"fabricloader": ">=${loader_version}",
 		"minecraft": ">=${minecraft_version}",
-		"java": ">=21",
+		"java": ">=${java_version}",
 		"fabric-api": "*"
 	},
 	"suggests": {

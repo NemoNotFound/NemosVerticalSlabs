@@ -1,72 +1,79 @@
 package com.nemonotfound.nemos.vertical.slabs.world.item;
 
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.VerticalSlabBlocks;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class VerticalSlabItems {
 
-    public static final Item OAK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.OAK_VERTICAL_SLAB);
-    public static final Item SPRUCE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SPRUCE_VERTICAL_SLAB);
-    public static final Item BIRCH_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.BIRCH_VERTICAL_SLAB);
-    public static final Item JUNGLE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.JUNGLE_VERTICAL_SLAB);
-    public static final Item ACACIA_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.ACACIA_VERTICAL_SLAB);
-    public static final Item DARK_OAK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.DARK_OAK_VERTICAL_SLAB);
-    public static final Item MANGROVE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.MANGROVE_VERTICAL_SLAB);
-    public static final Item CHERRY_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.CHERRY_VERTICAL_SLAB);
-    public static final Item PALE_OAK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.PALE_OAK_VERTICAL_SLAB);
-    public static final Item BAMBOO_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.BAMBOO_VERTICAL_SLAB);
-    public static final Item BAMBOO_MOSAIC_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB);
-    public static final Item CRIMSON_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.CRIMSON_VERTICAL_SLAB);
-    public static final Item WARPED_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WARPED_VERTICAL_SLAB);
-    public static final Item STONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.STONE_VERTICAL_SLAB);
-    public static final Item COBBLESTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.COBBLESTONE_VERTICAL_SLAB);
-    public static final Item MOSSY_COBBLESTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB);
-    public static final Item SMOOTH_STONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SMOOTH_STONE_VERTICAL_SLAB);
-    public static final Item STONE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.STONE_BRICK_VERTICAL_SLAB);
-    public static final Item MOSSY_STONE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB);
-    public static final Item GRANITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.GRANITE_VERTICAL_SLAB);
-    public static final Item POLISHED_GRANITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_GRANITE_VERTICAL_SLAB);
-    public static final Item DIORITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.DIORITE_VERTICAL_SLAB);
-    public static final Item POLISHED_DIORITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_DIORITE_VERTICAL_SLAB);
-    public static final Item ANDESITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.ANDESITE_VERTICAL_SLAB);
-    public static final Item POLISHED_ANDESITE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_ANDESITE_VERTICAL_SLAB);
-    public static final Item COBBLED_DEEPSLATE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB);
-    public static final Item POLISHED_DEEPSLATE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB);
-    public static final Item DEEPSLATE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB);
-    public static final Item DEEPSLATE_TILE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.DEEPSLATE_TILE_VERTICAL_SLAB);
-    public static final Item TUFF_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.TUFF_VERTICAL_SLAB);
-    public static final Item POLISHED_TUFF_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_TUFF_VERTICAL_SLAB);
-    public static final Item TUFF_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.TUFF_BRICK_VERTICAL_SLAB);
-    public static final Item BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.BRICK_VERTICAL_SLAB);
-    public static final Item MUD_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.MUD_BRICK_VERTICAL_SLAB);
-    public static final Item SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SANDSTONE_VERTICAL_SLAB);
-    public static final Item SMOOTH_SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB);
-    public static final Item CUT_SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.CUT_SANDSTONE_VERTICAL_SLAB);
-    public static final Item RED_SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.RED_SANDSTONE_VERTICAL_SLAB);
-    public static final Item SMOOTH_RED_SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB);
-    public static final Item CUT_RED_SANDSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB);
-    public static final Item PRISMARINE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.PRISMARINE_VERTICAL_SLAB);
-    public static final Item PRISMARINE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.PRISMARINE_BRICK_VERTICAL_SLAB);
-    public static final Item DARK_PRISMARINE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.DARK_PRISMARINE_VERTICAL_SLAB);
-    public static final Item NETHER_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.NETHER_BRICK_VERTICAL_SLAB);
-    public static final Item RED_NETHER_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.RED_NETHER_BRICK_VERTICAL_SLAB);
-    public static final Item BLACKSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.BLACKSTONE_VERTICAL_SLAB);
-    public static final Item POLISHED_BLACKSTONE_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB);
-    public static final Item POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB);
-    public static final Item END_STONE_BRICK_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.END_STONE_BRICK_VERTICAL_SLAB);
-    public static final Item PURPUR_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.PURPUR_VERTICAL_SLAB);
-    public static final Item QUARTZ_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB);
-    public static final Item SMOOTH_QUARTZ_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB);
-    public static final Item CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLAB);
-    public static final Item EXPOSED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item WEATHERED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item OXIDIZED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item WAXED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB);
-    public static final Item WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB = Items.registerBlock(VerticalSlabBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item OAK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.OAK_VERTICAL_SLAB);
+    public static final Item SPRUCE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SPRUCE_VERTICAL_SLAB);
+    public static final Item BIRCH_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.BIRCH_VERTICAL_SLAB);
+    public static final Item JUNGLE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.JUNGLE_VERTICAL_SLAB);
+    public static final Item ACACIA_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.ACACIA_VERTICAL_SLAB);
+    public static final Item DARK_OAK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.DARK_OAK_VERTICAL_SLAB);
+    public static final Item MANGROVE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.MANGROVE_VERTICAL_SLAB);
+    public static final Item CHERRY_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.CHERRY_VERTICAL_SLAB);
+    public static final Item PALE_OAK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.PALE_OAK_VERTICAL_SLAB);
+    public static final Item BAMBOO_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.BAMBOO_VERTICAL_SLAB);
+    public static final Item BAMBOO_MOSAIC_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.BAMBOO_MOSAIC_VERTICAL_SLAB);
+    public static final Item CRIMSON_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.CRIMSON_VERTICAL_SLAB);
+    public static final Item WARPED_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WARPED_VERTICAL_SLAB);
+    public static final Item STONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.STONE_VERTICAL_SLAB);
+    public static final Item COBBLESTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.COBBLESTONE_VERTICAL_SLAB);
+    public static final Item MOSSY_COBBLESTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.MOSSY_COBBLESTONE_VERTICAL_SLAB);
+    public static final Item SMOOTH_STONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SMOOTH_STONE_VERTICAL_SLAB);
+    public static final Item STONE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.STONE_BRICK_VERTICAL_SLAB);
+    public static final Item MOSSY_STONE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.MOSSY_STONE_BRICK_VERTICAL_SLAB);
+    public static final Item GRANITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.GRANITE_VERTICAL_SLAB);
+    public static final Item POLISHED_GRANITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_GRANITE_VERTICAL_SLAB);
+    public static final Item DIORITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.DIORITE_VERTICAL_SLAB);
+    public static final Item POLISHED_DIORITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_DIORITE_VERTICAL_SLAB);
+    public static final Item ANDESITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.ANDESITE_VERTICAL_SLAB);
+    public static final Item POLISHED_ANDESITE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_ANDESITE_VERTICAL_SLAB);
+    public static final Item COBBLED_DEEPSLATE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.COBBLED_DEEPSLATE_VERTICAL_SLAB);
+    public static final Item POLISHED_DEEPSLATE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_DEEPSLATE_VERTICAL_SLAB);
+    public static final Item DEEPSLATE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.DEEPSLATE_BRICK_VERTICAL_SLAB);
+    public static final Item DEEPSLATE_TILE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.DEEPSLATE_TILE_VERTICAL_SLAB);
+    public static final Item TUFF_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.TUFF_VERTICAL_SLAB);
+    public static final Item POLISHED_TUFF_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_TUFF_VERTICAL_SLAB);
+    public static final Item TUFF_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.TUFF_BRICK_VERTICAL_SLAB);
+    public static final Item BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.BRICK_VERTICAL_SLAB);
+    public static final Item MUD_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.MUD_BRICK_VERTICAL_SLAB);
+    public static final Item SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SANDSTONE_VERTICAL_SLAB);
+    public static final Item SMOOTH_SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SMOOTH_SANDSTONE_VERTICAL_SLAB);
+    public static final Item CUT_SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.CUT_SANDSTONE_VERTICAL_SLAB);
+    public static final Item RED_SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.RED_SANDSTONE_VERTICAL_SLAB);
+    public static final Item SMOOTH_RED_SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_SLAB);
+    public static final Item CUT_RED_SANDSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.CUT_RED_SANDSTONE_VERTICAL_SLAB);
+    public static final Item PRISMARINE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.PRISMARINE_VERTICAL_SLAB);
+    public static final Item PRISMARINE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.PRISMARINE_BRICK_VERTICAL_SLAB);
+    public static final Item DARK_PRISMARINE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.DARK_PRISMARINE_VERTICAL_SLAB);
+    public static final Item NETHER_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.NETHER_BRICK_VERTICAL_SLAB);
+    public static final Item RED_NETHER_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.RED_NETHER_BRICK_VERTICAL_SLAB);
+    public static final Item BLACKSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.BLACKSTONE_VERTICAL_SLAB);
+    public static final Item POLISHED_BLACKSTONE_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_BLACKSTONE_VERTICAL_SLAB);
+    public static final Item POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB);
+    public static final Item END_STONE_BRICK_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.END_STONE_BRICK_VERTICAL_SLAB);
+    public static final Item PURPUR_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.PURPUR_VERTICAL_SLAB);
+    public static final Item QUARTZ_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB);
+    public static final Item SMOOTH_QUARTZ_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB);
+    public static final Item CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLAB);
+    public static final Item EXPOSED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.EXPOSED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item WEATHERED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WEATHERED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item OXIDIZED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item WAXED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WAXED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB);
+    public static final Item WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB = registerBlock(VerticalSlabBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
 
     public static final Item MOSSY_OAK_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlocks.MOSSY_OAK_VERTICAL_SLAB);
     public static final Item MOSSY_SPRUCE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlocks.MOSSY_SPRUCE_VERTICAL_SLAB);
@@ -249,6 +256,36 @@ public class VerticalSlabItems {
             return null;
         }
 
-        return Items.registerBlock(block);
+        return registerBlock(block);
+    }
+
+    private static Item registerBlock(final Block block) {
+        return registerBlock(block, BlockItem::new);
+    }
+
+    private static Item registerBlock(final Block block, final BiFunction<Block, Item.Properties, Item> itemFactory) {
+        return registerBlock(block, itemFactory, new Item.Properties());
+    }
+
+    private static Item registerBlock(final Block block, final BiFunction<Block, Item.Properties, Item> itemFactory, final Item.Properties properties) {
+        return registerItem(
+                resourceKey(block.properties().blockIdOrThrow()),
+                (p) -> itemFactory.apply(block, p),
+                properties.useBlockDescriptionPrefix()
+                        .requiredFeatures(block.requiredFeatures())
+        );
+    }
+
+    private static ResourceKey<Item> resourceKey(final ResourceKey<Block> blockName) {
+        return ResourceKey.create(Registries.ITEM, blockName.identifier());
+    }
+
+    private static Item registerItem(final ResourceKey<Item> key, final Function<Item.Properties, Item> itemFactory, final Item.Properties properties) {
+        Item item = itemFactory.apply(properties.setId(key));
+        if (item instanceof BlockItem blockItem) {
+            blockItem.registerBlocks(Item.BY_BLOCK, item);
+        }
+
+        return Registry.register(BuiltInRegistries.ITEM, key, item);
     }
 }

@@ -1,7 +1,7 @@
 {
    "pack": {
-      "pack_format": 64,
-      "supported_formats": [64],
+      "min_format": 84,
+      "max_format": 84,
       "description": {
          "translate": "resourcePack.nemos_vertical_slabs.biomeswevegone_vertical_slabs.description"
       }

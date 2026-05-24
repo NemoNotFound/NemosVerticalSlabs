@@ -1,13 +1,13 @@
 package com.nemonotfound.nemos.vertical.slabs.datagen;
 
 import biomesoplenty.api.block.BOPBlocks;
-import com.devnemo.nemos.mossy.blocks.world.level.block.NemosMossyBlocks;
+import com.nemonotfound.nemos.mossy.blocks.world.level.block.MossyBlocks;
 import com.nemonotfound.nemos.vertical.slabs.client.data.models.model.NemosVerticalModelTemplates;
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.VerticalSlabBlocks;
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.state.properties.NemosVerticalBlockStateProperties;
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.state.properties.VerticalSlabType;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
@@ -18,11 +18,11 @@ import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.potionstudios.biomeswevegone.world.level.block.BWGBlocks;
-import net.potionstudios.biomeswevegone.world.level.block.wood.BWGWood;
 import org.jetbrains.annotations.NotNull;
 
 import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
@@ -33,7 +33,7 @@ public class ModelProvider extends FabricModelProvider {
     private static final String SIDE_SUFFIX = "_side";
     private static final String BOTTOM_SUFFIX = "_bottom";
 
-    public ModelProvider(FabricDataOutput output) {
+    public ModelProvider(FabricPackOutput output) {
         super(output);
     }
 
@@ -100,86 +100,86 @@ public class ModelProvider extends FabricModelProvider {
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.WEATHERED_CUT_COPPER, VerticalSlabBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.OXIDIZED_CUT_COPPER, VerticalSlabBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
 
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_OAK_PLANKS.get(), VerticalSlabBlocks.MOSSY_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_SPRUCE_PLANKS.get(), VerticalSlabBlocks.MOSSY_SPRUCE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_BIRCH_PLANKS.get(), VerticalSlabBlocks.MOSSY_BIRCH_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_JUNGLE_PLANKS.get(), VerticalSlabBlocks.MOSSY_JUNGLE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_ACACIA_PLANKS.get(), VerticalSlabBlocks.MOSSY_ACACIA_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_DARK_OAK_PLANKS.get(), VerticalSlabBlocks.MOSSY_DARK_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_MANGROVE_PLANKS.get(), VerticalSlabBlocks.MOSSY_MANGROVE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_CHERRY_PLANKS.get(), VerticalSlabBlocks.MOSSY_CHERRY_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_PALE_OAK_PLANKS.get(), VerticalSlabBlocks.MOSSY_PALE_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_BAMBOO_PLANKS.get(), VerticalSlabBlocks.MOSSY_BAMBOO_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_BAMBOO_MOSAIC.get(), VerticalSlabBlocks.MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_CRIMSON_PLANKS.get(), VerticalSlabBlocks.MOSSY_CRIMSON_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_WARPED_PLANKS.get(), VerticalSlabBlocks.MOSSY_WARPED_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_STONE.get(), VerticalSlabBlocks.MOSSY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_COBBLED_DEEPSLATE.get(), VerticalSlabBlocks.MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_DEEPSLATE_BRICKS.get(), VerticalSlabBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_DEEPSLATE_TILES.get(), VerticalSlabBlocks.MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_TUFF.get(), VerticalSlabBlocks.MOSSY_TUFF_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_TUFF_BRICKS.get(), VerticalSlabBlocks.MOSSY_TUFF_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.MOSSY_BRICKS.get(), VerticalSlabBlocks.MOSSY_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_OAK_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_SPRUCE_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_SPRUCE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_BIRCH_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_BIRCH_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_JUNGLE_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_JUNGLE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_ACACIA_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_ACACIA_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_DARK_OAK_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_DARK_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_MANGROVE_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_MANGROVE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_CHERRY_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_CHERRY_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_PALE_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_BAMBOO_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_BAMBOO_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_BAMBOO_MOSAIC.get(), VerticalSlabBlocks.PALE_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_CRIMSON_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_CRIMSON_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_WARPED_PLANKS.get(), VerticalSlabBlocks.PALE_MOSSY_WARPED_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_STONE.get(), VerticalSlabBlocks.PALE_MOSSY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_COBBLED_DEEPSLATE.get(), VerticalSlabBlocks.PALE_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_DEEPSLATE_BRICKS.get(), VerticalSlabBlocks.PALE_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_DEEPSLATE_TILES.get(), VerticalSlabBlocks.PALE_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_TUFF.get(), VerticalSlabBlocks.PALE_MOSSY_TUFF_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_TUFF_BRICKS.get(), VerticalSlabBlocks.PALE_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.PALE_MOSSY_BRICKS.get(), VerticalSlabBlocks.PALE_MOSSY_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_OAK_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_SPRUCE_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_SPRUCE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_BIRCH_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_BIRCH_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_JUNGLE_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_JUNGLE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_ACACIA_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_ACACIA_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_DARK_OAK_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_DARK_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_MANGROVE_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_MANGROVE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_CHERRY_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_CHERRY_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_PALE_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_BAMBOO_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_BAMBOO_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_BAMBOO_MOSAIC.get(), VerticalSlabBlocks.CRIMSON_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_CRIMSON_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_CRIMSON_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_WARPED_PLANKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_WARPED_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_STONE.get(), VerticalSlabBlocks.CRIMSON_MOSSY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_COBBLED_DEEPSLATE.get(), VerticalSlabBlocks.CRIMSON_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_DEEPSLATE_BRICKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_DEEPSLATE_TILES.get(), VerticalSlabBlocks.CRIMSON_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_TUFF.get(), VerticalSlabBlocks.CRIMSON_MOSSY_TUFF_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_TUFF_BRICKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.CRIMSON_MOSSY_BRICKS.get(), VerticalSlabBlocks.CRIMSON_MOSSY_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_OAK_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_SPRUCE_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_SPRUCE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_BIRCH_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_BIRCH_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_JUNGLE_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_JUNGLE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_ACACIA_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_ACACIA_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_DARK_OAK_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_DARK_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_MANGROVE_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_MANGROVE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_CHERRY_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_CHERRY_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_PALE_OAK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_BAMBOO_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_BAMBOO_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_BAMBOO_MOSAIC.get(), VerticalSlabBlocks.WARPED_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_CRIMSON_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_CRIMSON_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_WARPED_PLANKS.get(), VerticalSlabBlocks.WARPED_MOSSY_WARPED_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_STONE.get(), VerticalSlabBlocks.WARPED_MOSSY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_COBBLED_DEEPSLATE.get(), VerticalSlabBlocks.WARPED_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_DEEPSLATE_BRICKS.get(), VerticalSlabBlocks.WARPED_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_DEEPSLATE_TILES.get(), VerticalSlabBlocks.WARPED_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_TUFF.get(), VerticalSlabBlocks.WARPED_MOSSY_TUFF_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_TUFF_BRICKS.get(), VerticalSlabBlocks.WARPED_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, NemosMossyBlocks.WARPED_MOSSY_BRICKS.get(), VerticalSlabBlocks.WARPED_MOSSY_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_OAK_PLANKS, VerticalSlabBlocks.MOSSY_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_SPRUCE_PLANKS, VerticalSlabBlocks.MOSSY_SPRUCE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_BIRCH_PLANKS, VerticalSlabBlocks.MOSSY_BIRCH_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_JUNGLE_PLANKS, VerticalSlabBlocks.MOSSY_JUNGLE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_ACACIA_PLANKS, VerticalSlabBlocks.MOSSY_ACACIA_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_DARK_OAK_PLANKS, VerticalSlabBlocks.MOSSY_DARK_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_MANGROVE_PLANKS, VerticalSlabBlocks.MOSSY_MANGROVE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_CHERRY_PLANKS, VerticalSlabBlocks.MOSSY_CHERRY_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_PALE_OAK_PLANKS, VerticalSlabBlocks.MOSSY_PALE_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_BAMBOO_PLANKS, VerticalSlabBlocks.MOSSY_BAMBOO_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_BAMBOO_MOSAIC, VerticalSlabBlocks.MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_CRIMSON_PLANKS, VerticalSlabBlocks.MOSSY_CRIMSON_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_WARPED_PLANKS, VerticalSlabBlocks.MOSSY_WARPED_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_STONE, VerticalSlabBlocks.MOSSY_STONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_COBBLED_DEEPSLATE, VerticalSlabBlocks.MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_DEEPSLATE_BRICKS, VerticalSlabBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_DEEPSLATE_TILES, VerticalSlabBlocks.MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_TUFF, VerticalSlabBlocks.MOSSY_TUFF_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_TUFF_BRICKS, VerticalSlabBlocks.MOSSY_TUFF_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.MOSSY_BRICKS, VerticalSlabBlocks.MOSSY_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_OAK_PLANKS, VerticalSlabBlocks.PALE_MOSSY_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_SPRUCE_PLANKS, VerticalSlabBlocks.PALE_MOSSY_SPRUCE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_BIRCH_PLANKS, VerticalSlabBlocks.PALE_MOSSY_BIRCH_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_JUNGLE_PLANKS, VerticalSlabBlocks.PALE_MOSSY_JUNGLE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_ACACIA_PLANKS, VerticalSlabBlocks.PALE_MOSSY_ACACIA_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_DARK_OAK_PLANKS, VerticalSlabBlocks.PALE_MOSSY_DARK_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_MANGROVE_PLANKS, VerticalSlabBlocks.PALE_MOSSY_MANGROVE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_CHERRY_PLANKS, VerticalSlabBlocks.PALE_MOSSY_CHERRY_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_PALE_OAK_PLANKS, VerticalSlabBlocks.PALE_MOSSY_PALE_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_BAMBOO_PLANKS, VerticalSlabBlocks.PALE_MOSSY_BAMBOO_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_BAMBOO_MOSAIC, VerticalSlabBlocks.PALE_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_CRIMSON_PLANKS, VerticalSlabBlocks.PALE_MOSSY_CRIMSON_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_WARPED_PLANKS, VerticalSlabBlocks.PALE_MOSSY_WARPED_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_STONE, VerticalSlabBlocks.PALE_MOSSY_STONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_COBBLED_DEEPSLATE, VerticalSlabBlocks.PALE_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_DEEPSLATE_BRICKS, VerticalSlabBlocks.PALE_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_DEEPSLATE_TILES, VerticalSlabBlocks.PALE_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_TUFF, VerticalSlabBlocks.PALE_MOSSY_TUFF_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_TUFF_BRICKS, VerticalSlabBlocks.PALE_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.PALE_MOSSY_BRICKS, VerticalSlabBlocks.PALE_MOSSY_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_OAK_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_SPRUCE_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_SPRUCE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_BIRCH_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_BIRCH_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_JUNGLE_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_JUNGLE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_ACACIA_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_ACACIA_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_DARK_OAK_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_DARK_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_MANGROVE_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_MANGROVE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_CHERRY_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_CHERRY_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_PALE_OAK_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_PALE_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_BAMBOO_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_BAMBOO_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_BAMBOO_MOSAIC, VerticalSlabBlocks.CRIMSON_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_CRIMSON_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_CRIMSON_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_WARPED_PLANKS, VerticalSlabBlocks.CRIMSON_MOSSY_WARPED_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_STONE, VerticalSlabBlocks.CRIMSON_MOSSY_STONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_COBBLED_DEEPSLATE, VerticalSlabBlocks.CRIMSON_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_DEEPSLATE_BRICKS, VerticalSlabBlocks.CRIMSON_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_DEEPSLATE_TILES, VerticalSlabBlocks.CRIMSON_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_TUFF, VerticalSlabBlocks.CRIMSON_MOSSY_TUFF_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_TUFF_BRICKS, VerticalSlabBlocks.CRIMSON_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.CRIMSON_MOSSY_BRICKS, VerticalSlabBlocks.CRIMSON_MOSSY_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_OAK_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_SPRUCE_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_SPRUCE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_BIRCH_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_BIRCH_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_JUNGLE_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_JUNGLE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_ACACIA_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_ACACIA_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_DARK_OAK_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_DARK_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_MANGROVE_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_MANGROVE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_CHERRY_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_CHERRY_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_PALE_OAK_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_PALE_OAK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_BAMBOO_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_BAMBOO_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_BAMBOO_MOSAIC, VerticalSlabBlocks.WARPED_MOSSY_BAMBOO_MOSAIC_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_CRIMSON_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_CRIMSON_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_WARPED_PLANKS, VerticalSlabBlocks.WARPED_MOSSY_WARPED_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_STONE, VerticalSlabBlocks.WARPED_MOSSY_STONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_COBBLED_DEEPSLATE, VerticalSlabBlocks.WARPED_MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_DEEPSLATE_BRICKS, VerticalSlabBlocks.WARPED_MOSSY_DEEPSLATE_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_DEEPSLATE_TILES, VerticalSlabBlocks.WARPED_MOSSY_DEEPSLATE_TILE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_TUFF, VerticalSlabBlocks.WARPED_MOSSY_TUFF_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_TUFF_BRICKS, VerticalSlabBlocks.WARPED_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_BRICKS, VerticalSlabBlocks.WARPED_MOSSY_BRICK_VERTICAL_SLAB);
 
         generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_WHITE_SANDSTONE, BOPBlocks.WHITE_SANDSTONE, VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WHITE_SANDSTONE, BOPBlocks.SMOOTH_WHITE_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
@@ -205,74 +205,74 @@ public class ModelProvider extends FabricModelProvider {
         generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.HELLBARK_PLANKS, VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.EMPYREAL_PLANKS, VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB);
 
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.ASPEN.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ASPEN_VERTICAL_SLAB, "aspen/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.BAOBAB.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_BOABAB_VERTICAL_SLAB, "baobab/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.BLUE_ENCHANTED.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_BLUE_ENCHANTED_VERTICAL_SLAB, "blue_enchanted/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.CIKA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CIKA_VERTICAL_SLAB, "cika/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.CYPRESS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CYPRESS_VERTICAL_SLAB, "cypress/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.EBONY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_EBONY_VERTICAL_SLAB, "ebony/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.FIR.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_FIR_VERTICAL_SLAB, "fir/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.FLORUS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_FLORUS_VERTICAL_SLAB, "florus/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.GREEN_ENCHANTED.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_GREEN_ENCHANTED_VERTICAL_SLAB, "green_enchanted/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.HOLLY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_HOLLY_VERTICAL_SLAB, "holly/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.IRONWOOD.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_IRONWOOD_VERTICAL_SLAB, "ironwood/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.JACARANDA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_JACARANDA_VERTICAL_SLAB, "jacaranda/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.MAHOGANY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MAHOGANY_VERTICAL_SLAB, "mahogany/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.MAPLE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MAPLE_VERTICAL_SLAB, "maple/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.PALM.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PALM_VERTICAL_SLAB, "palm/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.PINE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PINE_VERTICAL_SLAB, "pine/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.RAINBOW_EUCALYPTUS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RAINBOW_EUCALYPTUS_VERTICAL_SLAB, "rainbow_eucalyptus/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.REDWOOD.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_REDWOOD_VERTICAL_SLAB, "redwood/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SAKURA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SAKURA_VERTICAL_SLAB, "sakura/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SKYRIS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SKYRIS_VERTICAL_SLAB, "skyris/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SPIRIT.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SPIRIT_VERTICAL_SLAB, "spirit/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WHITE_MANGROVE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_MANGROVE_VERTICAL_SLAB, "white_mangrove/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WILLOW.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WILLOW_VERTICAL_SLAB, "willow/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WITCH_HAZEL.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WITCH_HAZEL_VERTICAL_SLAB, "witch_hazel/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.ZELKOVA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ZELKOVA_VERTICAL_SLAB, "zelkova/planks");
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getSandstone(), BWGBlocks.BLACK_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_BLACK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getSandstone(), BWGBlocks.BLACK_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getCutSandstone(), BWGBlocks.BLACK_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getSandstone(), BWGBlocks.WHITE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getSandstone(), BWGBlocks.WHITE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getCutSandstone(), BWGBlocks.WHITE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getSandstone(), BWGBlocks.BLUE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_BLUE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getSandstone(), BWGBlocks.BLUE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_BLUE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getCutSandstone(), BWGBlocks.BLUE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_BLUE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getSandstone(), BWGBlocks.PURPLE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_PURPLE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getSandstone(), BWGBlocks.PURPLE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_PURPLE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getCutSandstone(), BWGBlocks.PURPLE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_PURPLE_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getSandstone(), BWGBlocks.PINK_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_PINK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getSandstone(), BWGBlocks.PINK_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_PINK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getCutSandstone(), BWGBlocks.PINK_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_PINK_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getCutSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_COBBLESTONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_COBBLESTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_WHITE_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_WHITE_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_WHITE_DACITE_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_COBBLESTONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_COBBLESTONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_RED_ROCK_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_RED_ROCK_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_RED_ROCK_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.POLISHED_RED_ROCK_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_POLISHED_RED_ROCK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_TILE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_STONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.ROCKY_STONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ROCKY_STONE_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PALE_MUD_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PALE_MUD_BRICK_VERTICAL_SLAB);
-        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CATTAIL_THATCH.get(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CATTAIL_THATCH_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.ASPEN.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ASPEN_VERTICAL_SLAB, "aspen/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.BAOBAB.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_BOABAB_VERTICAL_SLAB, "baobab/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.BLUE_ENCHANTED.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_BLUE_ENCHANTED_VERTICAL_SLAB, "blue_enchanted/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.CIKA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CIKA_VERTICAL_SLAB, "cika/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.CYPRESS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CYPRESS_VERTICAL_SLAB, "cypress/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.EBONY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_EBONY_VERTICAL_SLAB, "ebony/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.FIR.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_FIR_VERTICAL_SLAB, "fir/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.FLORUS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_FLORUS_VERTICAL_SLAB, "florus/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.GREEN_ENCHANTED.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_GREEN_ENCHANTED_VERTICAL_SLAB, "green_enchanted/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.HOLLY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_HOLLY_VERTICAL_SLAB, "holly/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.IRONWOOD.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_IRONWOOD_VERTICAL_SLAB, "ironwood/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.JACARANDA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_JACARANDA_VERTICAL_SLAB, "jacaranda/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.MAHOGANY.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MAHOGANY_VERTICAL_SLAB, "mahogany/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.MAPLE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MAPLE_VERTICAL_SLAB, "maple/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.PALM.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PALM_VERTICAL_SLAB, "palm/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.PINE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PINE_VERTICAL_SLAB, "pine/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.RAINBOW_EUCALYPTUS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RAINBOW_EUCALYPTUS_VERTICAL_SLAB, "rainbow_eucalyptus/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.REDWOOD.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_REDWOOD_VERTICAL_SLAB, "redwood/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SAKURA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SAKURA_VERTICAL_SLAB, "sakura/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SKYRIS.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SKYRIS_VERTICAL_SLAB, "skyris/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.SPIRIT.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_SPIRIT_VERTICAL_SLAB, "spirit/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WHITE_MANGROVE.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_MANGROVE_VERTICAL_SLAB, "white_mangrove/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WILLOW.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WILLOW_VERTICAL_SLAB, "willow/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.WITCH_HAZEL.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WITCH_HAZEL_VERTICAL_SLAB, "witch_hazel/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.ZELKOVA.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ZELKOVA_VERTICAL_SLAB, "zelkova/planks");
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getSandstone(), BWGBlocks.BLACK_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_BLACK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getSandstone(), BWGBlocks.BLACK_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.BLACK_SAND_SET.getCutSandstone(), BWGBlocks.BLACK_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getSandstone(), BWGBlocks.WHITE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getSandstone(), BWGBlocks.WHITE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.WHITE_SAND_SET.getCutSandstone(), BWGBlocks.WHITE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getSandstone(), BWGBlocks.BLUE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_BLUE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getSandstone(), BWGBlocks.BLUE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_BLUE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.BLUE_SAND_SET.getCutSandstone(), BWGBlocks.BLUE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_BLUE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getSandstone(), BWGBlocks.PURPLE_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_PURPLE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getSandstone(), BWGBlocks.PURPLE_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_PURPLE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.PURPLE_SAND_SET.getCutSandstone(), BWGBlocks.PURPLE_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_PURPLE_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getSandstone(), BWGBlocks.PINK_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_PINK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getSandstone(), BWGBlocks.PINK_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_PINK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.PINK_SAND_SET.getCutSandstone(), BWGBlocks.PINK_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_PINK_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSmoothSandstone(), TOP_SUFFIX, VerticalSlabBlocks.BIOMES_WEVE_GONE_SMOOTH_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BWGBlocks.WINDSWEPT_SAND_SET.getCutSandstone(), BWGBlocks.WINDSWEPT_SAND_SET.getSandstone(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CUT_WINDSWEPT_SANDSTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_COBBLESTONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_COBBLESTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.DACITE_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_DACITE_TILE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_WHITE_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_WHITE_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_WHITE_DACITE_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_WHITE_DACITE_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_COBBLESTONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_COBBLESTONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.WHITE_DACITE_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_WHITE_DACITE_TILE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CRACKED_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CRACKED_RED_ROCK_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_RED_ROCK_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CHISELED_RED_ROCK_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CHISELED_RED_ROCK_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.POLISHED_RED_ROCK_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_POLISHED_RED_ROCK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.RED_ROCK_TILES_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_RED_ROCK_TILE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.MOSSY_STONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_MOSSY_STONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.ROCKY_STONE_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ROCKY_STONE_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.PALE_MUD_BRICKS_SET.getBase(), VerticalSlabBlocks.BIOMES_WEVE_GONE_PALE_MUD_BRICK_VERTICAL_SLAB);
+//        generateVerticalSlabBlockModel(blockModelGenerators, BWGBlocks.CATTAIL_THATCH.get(), VerticalSlabBlocks.BIOMES_WEVE_GONE_CATTAIL_THATCH_VERTICAL_SLAB);
     }
 
     @Override
@@ -282,7 +282,7 @@ public class ModelProvider extends FabricModelProvider {
 
     private void registerSmoothStone(BlockModelGenerators blockModelGenerators) {
         var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE))
-                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE_SLAB).withSuffix("_side"))
+                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE_SLAB, "_side"))
                 .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE))
                 .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE));
         var textureMapping2 = TextureMapping.column(TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE_SLAB, "_side"), textureMapping.get(TextureSlot.TOP));
@@ -301,28 +301,28 @@ public class ModelProvider extends FabricModelProvider {
     }
 
     private void generateVerticalSlabBlockModel(BlockModelGenerators blockModelGenerators, Block textureBlock, Block block) {
-
         generateVerticalSlabBlockModel(blockModelGenerators, textureBlock, block, "");
     }
 
     private void generateVerticalSlabBlockModel(BlockModelGenerators blockModelGenerators, Block textureBlock, Block block, String path) {
-        var textureMapping = new TextureMapping().put(TextureSlot.TOP, getIdentifierWithPath(textureBlock, path))
-                .put(TextureSlot.SIDE, getIdentifierWithPath(textureBlock, path))
-                .put(TextureSlot.BOTTOM, getIdentifierWithPath(textureBlock, path))
-                .put(TextureSlot.PARTICLE, getIdentifierWithPath(textureBlock, path));
+        var textureMapping = new TextureMapping().put(TextureSlot.TOP, getBlockTextureWithPath(textureBlock, path))
+                .put(TextureSlot.SIDE, getBlockTextureWithPath(textureBlock, path))
+                .put(TextureSlot.BOTTOM, getBlockTextureWithPath(textureBlock, path))
+                .put(TextureSlot.PARTICLE, getBlockTextureWithPath(textureBlock, path));
         var fullMultiVariant = plainVariant(ModelLocationUtils.getModelLocation(textureBlock));
 
         generateVerticalSlabBlockModel(blockModelGenerators, textureMapping, block, fullMultiVariant);
     }
 
-    private Identifier getIdentifierWithPath(Block textureBlock, String path) {
-        return TextureMapping.getBlockTexture(textureBlock)
-                .withPath(oldPath -> retrieveNewPath(oldPath, path));
+    private Material getBlockTextureWithPath(Block textureBlock, String path) {
+        Identifier id = BuiltInRegistries.BLOCK.getKey(textureBlock);
+
+        return new Material(id.withPath(retrieveNewPath(id.getPath(), path)));
     }
 
     private String retrieveNewPath(String oldPath, String path) {
         if (path.isEmpty()) {
-            return oldPath;
+            return "block/" +  oldPath;
         }
 
         return "block/" + path;
@@ -333,19 +333,19 @@ public class ModelProvider extends FabricModelProvider {
     }
 
     private void generateVerticalSlabBlockModel(BlockModelGenerators blockModelGenerators, Block textureBlock, Block fullBlock, String topSuffix, String sideSuffix, String bottomSuffix, Block block) {
-        var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(textureBlock).withSuffix(topSuffix))
-                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(textureBlock).withSuffix(sideSuffix))
-                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(textureBlock).withSuffix(bottomSuffix))
-                .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(textureBlock).withSuffix(topSuffix));
+        var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(textureBlock, topSuffix))
+                .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(textureBlock, sideSuffix))
+                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(textureBlock, bottomSuffix))
+                .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(textureBlock, topSuffix));
         var fullMultiVariant = plainVariant(ModelLocationUtils.getModelLocation(fullBlock));
 
         generateVerticalSlabBlockModel(blockModelGenerators, textureMapping, block, fullMultiVariant);
     }
 
     private void generateVerticalSlabBlockModelForCutSandstone(BlockModelGenerators blockModelGenerators, Block textureBlock, Block secondTextureBlock, Block block) {
-        var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(secondTextureBlock).withSuffix(TOP_SUFFIX))
+        var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(secondTextureBlock, TOP_SUFFIX))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(textureBlock))
-                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(secondTextureBlock).withSuffix(BOTTOM_SUFFIX))
+                .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(secondTextureBlock, BOTTOM_SUFFIX))
                 .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(textureBlock));
         var fullMultiVariant = plainVariant(ModelLocationUtils.getModelLocation(textureBlock));
 

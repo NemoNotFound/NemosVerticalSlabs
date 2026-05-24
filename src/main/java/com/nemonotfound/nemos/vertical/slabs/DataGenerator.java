@@ -5,7 +5,7 @@ import com.nemonotfound.nemos.vertical.slabs.datagen.lang.EnglishLanguageProvide
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class NemosVerticalSlabsDataGenerator implements DataGeneratorEntrypoint {
+public class DataGenerator implements DataGeneratorEntrypoint {
 
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {

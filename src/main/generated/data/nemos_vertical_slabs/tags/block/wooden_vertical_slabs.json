@@ -253,103 +253,103 @@
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_aspen_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_baobab_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_blue_enchanted_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cika_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cypress_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_ebony_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_fir_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_florus_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_green_enchanted_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_holly_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_ironwood_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_jacaranda_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_mahogany_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_maple_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_palm_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_pine_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_rainbow_eucalyptus_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_redwood_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_sakura_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_skyris_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_spirit_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_mangrove_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_willow_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_witch_hazel_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_zelkova_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     }
   ]

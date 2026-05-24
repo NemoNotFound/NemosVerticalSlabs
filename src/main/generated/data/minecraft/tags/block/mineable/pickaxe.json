@@ -200,175 +200,175 @@
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_black_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_black_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_black_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_white_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_white_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_blue_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_blue_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_blue_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_purple_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_purple_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_purple_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_pink_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_pink_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_pink_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_windswept_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_smooth_windswept_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cut_windswept_sandstone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_dacite_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cracked_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_mossy_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_chiseled_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_dacite_cobblestone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_dacite_tile_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_dacite_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cracked_white_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_mossy_white_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_chiseled_white_dacite_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_dacite_cobblestone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_white_dacite_tile_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_red_rock_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_red_rock_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cracked_red_rock_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_mossy_red_rock_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_chiseled_red_rock_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_polished_red_rock_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_red_rock_tile_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_mossy_stone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_rocky_stone_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_pale_mud_brick_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     },
     {
-      "id": "nemos_vertical_slabs:biomeswevegone_cattail_thatch_vertical_slab",
+      "id": "minecraft:air",
       "required": false
     }
   ]
