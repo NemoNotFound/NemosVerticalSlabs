@@ -1,4 +1,4 @@
-# Changelog v2.3.1
+# Changelog v2.3.2
 
-## Changes
-- Internal changes
+## Fixes
+- Fixed air getting caught on fire
