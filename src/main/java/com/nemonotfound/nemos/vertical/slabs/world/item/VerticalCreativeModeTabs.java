@@ -80,14 +80,14 @@ public class VerticalCreativeModeTabs {
         addDisplayItem(VerticalSlabItems.PURPUR_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.QUARTZ_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.EXPOSED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.WEATHERED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.WAXED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB);
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().oxidized());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().unaffected());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().exposed());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().weathered());
+        addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().oxidized());
 
         addDisplayItem(VerticalSlabItems.MOSSY_OAK_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.MOSSY_SPRUCE_VERTICAL_SLAB);

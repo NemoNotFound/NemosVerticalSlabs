@@ -2,13 +2,11 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
               "conditions": [
                 {
                   "block": "nemos_vertical_slabs:warped_mossy_tuff_vertical_slab",

@@ -1,9 +1,7 @@
 package com.nemonotfound.nemos.vertical.slabs.datagen;
 
-import biomesoplenty.api.item.BOPItems;
 import com.nemonotfound.nemos.mossy.blocks.world.item.MossyItems;
 import com.nemonotfound.nemos.vertical.slabs.world.item.VerticalSlabItems;
-import com.nemonotfound.nemos.vertical.slabs.world.level.block.VerticalSlabBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
@@ -81,14 +79,14 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
                 createVerticalSlabRecipe(VerticalSlabItems.PURPUR_VERTICAL_SLAB, Items.PURPUR_BLOCK);
                 createVerticalSlabRecipe(VerticalSlabItems.QUARTZ_VERTICAL_SLAB, Items.QUARTZ_BLOCK);
                 createVerticalSlabRecipe(VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB, Items.SMOOTH_QUARTZ);
-                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLAB, Items.CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.EXPOSED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WEATHERED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.OXIDIZED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.WAXED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_EXPOSED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_WEATHERED_CUT_COPPER);
-                createVerticalSlabRecipe(VerticalSlabItems.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_OXIDIZED_CUT_COPPER);
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.CUT_COPPER.weathering().unaffected());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), Items.CUT_COPPER.weathering().exposed());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered(), Items.CUT_COPPER.weathering().weathered());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().oxidized(), Items.CUT_COPPER.weathering().oxidized());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().unaffected(), Items.CUT_COPPER.waxed().unaffected());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().exposed(), Items.CUT_COPPER.waxed().exposed());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().weathered(), Items.CUT_COPPER.waxed().weathered());
+                createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().oxidized(), Items.CUT_COPPER.waxed().oxidized());
 
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.STONE_VERTICAL_SLAB, Items.STONE, 2);
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.STONE_BRICK_VERTICAL_SLAB, Items.STONE, 2);
@@ -147,22 +145,22 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.PURPUR_VERTICAL_SLAB, Items.PURPUR_BLOCK, 2);
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.QUARTZ_VERTICAL_SLAB, Items.QUARTZ_BLOCK, 2);
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB, Items.SMOOTH_QUARTZ, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLAB, Items.COPPER_BLOCK, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLAB, Items.CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.EXPOSED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.EXPOSED_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WEATHERED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WEATHERED_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.OXIDIZED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.OXIDIZED_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_COPPER_BLOCK, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_EXPOSED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_EXPOSED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_EXPOSED_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_WEATHERED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_WEATHERED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_WEATHERED_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_OXIDIZED_CUT_COPPER, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_SLAB, Items.WAXED_OXIDIZED_COPPER, 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.COPPER_BLOCK.weathering().unaffected(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.CUT_COPPER.weathering().unaffected(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), Items.CUT_COPPER.weathering().exposed(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), Items.COPPER_BLOCK.weathering().exposed(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered(), Items.CUT_COPPER.weathering().weathered(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered(), Items.COPPER_BLOCK.weathering().weathered(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().oxidized(), Items.CUT_COPPER.weathering().oxidized(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().oxidized(), Items.COPPER_BLOCK.weathering().oxidized(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().unaffected(), Items.CUT_COPPER.waxed().unaffected(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().unaffected(), Items.COPPER_BLOCK.waxed().unaffected(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().exposed(), Items.CUT_COPPER.waxed().exposed(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().exposed(), Items.COPPER_BLOCK.waxed().exposed(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().weathered(), Items.CUT_COPPER.waxed().weathered(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().weathered(), Items.COPPER_BLOCK.waxed().weathered(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().oxidized(), Items.CUT_COPPER.waxed().oxidized(), 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.waxed().oxidized(), Items.COPPER_BLOCK.waxed().oxidized(), 2);
 
                 createWoodenVerticalSlabRecipe(VerticalSlabItems.MOSSY_OAK_VERTICAL_SLAB, MossyItems.MOSSY_OAK_PLANKS);
                 createWoodenVerticalSlabRecipe(VerticalSlabItems.MOSSY_SPRUCE_VERTICAL_SLAB, MossyItems.MOSSY_SPRUCE_PLANKS);
@@ -280,44 +278,44 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WARPED_MOSSY_TUFF_BRICK_VERTICAL_SLAB, MossyItems.WARPED_MOSSY_TUFF_BRICKS, 2);
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WARPED_MOSSY_BRICK_VERTICAL_SLAB, MossyItems.WARPED_MOSSY_BRICKS, 2);
 
-                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_WHITE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_WHITE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_ORANGE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_ORANGE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_BLACK_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_BLACK_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE);
-                createVerticalSlabRecipe(VerticalSlabBlocks.BRIMSTONE_BRICK_VERTICAL_SLAB, BOPItems.BRIMSTONE_BRICKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.FIR_VERTICAL_SLAB, BOPItems.FIR_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.PINE_VERTICAL_SLAB, BOPItems.PINE_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAPLE_VERTICAL_SLAB, BOPItems.MAPLE_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB, BOPItems.REDWOOD_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB, BOPItems.MAHOGANY_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB, BOPItems.JACARANDA_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.PALM_VERTICAL_SLAB, BOPItems.PALM_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.WILLOW_VERTICAL_SLAB, BOPItems.WILLOW_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.DEAD_VERTICAL_SLAB, BOPItems.DEAD_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAGIC_VERTICAL_SLAB, BOPItems.MAGIC_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB, BOPItems.UMBRAN_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB, BOPItems.HELLBARK_PLANKS);
-                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB, BOPItems.EMPYREAL_PLANKS);
-
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_WHITE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_WHITE_SANDSTONE, 2);
-
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_ORANGE_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_ORANGE_SANDSTONE, 2);
-
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_BLACK_SANDSTONE, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_BLACK_SANDSTONE, 2);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_WHITE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_WHITE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_ORANGE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_ORANGE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_BLACK_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_BLACK_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE);
+//                createVerticalSlabRecipe(VerticalSlabBlocks.BRIMSTONE_BRICK_VERTICAL_SLAB, BOPItems.BRIMSTONE_BRICKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.FIR_VERTICAL_SLAB, BOPItems.FIR_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.PINE_VERTICAL_SLAB, BOPItems.PINE_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAPLE_VERTICAL_SLAB, BOPItems.MAPLE_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB, BOPItems.REDWOOD_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB, BOPItems.MAHOGANY_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB, BOPItems.JACARANDA_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.PALM_VERTICAL_SLAB, BOPItems.PALM_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.WILLOW_VERTICAL_SLAB, BOPItems.WILLOW_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.DEAD_VERTICAL_SLAB, BOPItems.DEAD_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.MAGIC_VERTICAL_SLAB, BOPItems.MAGIC_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB, BOPItems.UMBRAN_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB, BOPItems.HELLBARK_PLANKS);
+//                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB, BOPItems.EMPYREAL_PLANKS);
+//
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.WHITE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_WHITE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_WHITE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_WHITE_SANDSTONE, 2);
+//
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.ORANGE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_ORANGE_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_ORANGE_SANDSTONE, 2);
+//
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.BLACK_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.SMOOTH_BLACK_SANDSTONE, 2);
+//                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, BOPItems.CUT_BLACK_SANDSTONE, 2);
 
 //                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.BIOMES_WEVE_GONE_ASPEN_VERTICAL_SLAB, BWGWood.ASPEN.planks());
 //                createWoodenVerticalSlabRecipe(VerticalSlabBlocks.BIOMES_WEVE_GONE_BOABAB_VERTICAL_SLAB, BWGWood.BAOBAB.planks());
