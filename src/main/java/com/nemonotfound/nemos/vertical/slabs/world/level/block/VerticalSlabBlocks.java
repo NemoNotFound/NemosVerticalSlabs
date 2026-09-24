@@ -589,10 +589,6 @@ public class VerticalSlabBlocks {
             VerticalSlabBlockItemIds.BLACK_SANDSTONE_VERTICAL_SLAB.block(),
             BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(0.8F)
     );
-    public static final Block BRIMSTONE_BRICK_VERTICAL_SLAB = registerBopVerticalSlab(
-            VerticalSlabBlockItemIds.BRIMSTONE_BRICK_VERTICAL_SLAB.block(),
-            BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(1.0F, 3.0F)
-    );
     public static final Block FIR_VERTICAL_SLAB = registerBopVerticalSlab(
             VerticalSlabBlockItemIds.FIR_VERTICAL_SLAB.block(),
             BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).ignitedByLava().mapColor(MapColor.TERRACOTTA_WHITE).strength(2.0F, 3.0F).sound(SoundType.WOOD)

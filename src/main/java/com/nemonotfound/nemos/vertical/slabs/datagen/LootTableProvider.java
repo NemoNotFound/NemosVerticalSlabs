@@ -19,8 +19,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class LootTableProvider extends FabricBlockLootSubProvider {
 
-    public LootTableProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> providerCompletableFuture) {
+    private final GenerationTarget target;
+
+    public LootTableProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> providerCompletableFuture, GenerationTarget target) {
         super(output, providerCompletableFuture);
+        this.target = target;
     }
 
     @Override
@@ -167,29 +170,28 @@ public class LootTableProvider extends FabricBlockLootSubProvider {
         addVerticalSlabDrops(VerticalSlabBlocks.WARPED_MOSSY_TUFF_VERTICAL_SLAB);
         addVerticalSlabDrops(VerticalSlabBlocks.WARPED_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
 
-//        addVerticalSlabDrops(VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.BRIMSTONE_BRICK_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.FIR_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.PINE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.MAPLE_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.PALM_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.WILLOW_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.DEAD_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.MAGIC_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB);
-//        addVerticalSlabDrops(VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.FIR_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.PINE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.MAPLE_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.PALM_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.WILLOW_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.DEAD_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.MAGIC_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB);
+        addVerticalSlabDrops(VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB);
 
 //        addVerticalSlabDrops(VerticalSlabBlocks.BIOMES_WEVE_GONE_ASPEN_VERTICAL_SLAB);
 //        addVerticalSlabDrops(VerticalSlabBlocks.BIOMES_WEVE_GONE_BOABAB_VERTICAL_SLAB);
@@ -262,7 +264,9 @@ public class LootTableProvider extends FabricBlockLootSubProvider {
     }
 
     private void addVerticalSlabDrops(Block drop) {
-        this.add(drop, verticalSlabDrops(drop));
+        if (target.owns(drop)) {
+            this.add(drop, verticalSlabDrops(drop));
+        }
     }
 
     private LootTable.Builder verticalSlabDrops(Block drop) {

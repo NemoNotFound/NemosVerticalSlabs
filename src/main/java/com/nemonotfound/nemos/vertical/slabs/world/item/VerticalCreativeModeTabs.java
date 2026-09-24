@@ -179,7 +179,6 @@ public class VerticalCreativeModeTabs {
         addDisplayItem(VerticalSlabItems.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.BLACK_SANDSTONE_VERTICAL_SLAB);
-        addDisplayItem(VerticalSlabItems.BRIMSTONE_BRICK_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.FIR_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.PINE_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.MAPLE_VERTICAL_SLAB);

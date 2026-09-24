@@ -1,5 +1,6 @@
 package com.nemonotfound.nemos.vertical.slabs.datagen;
 
+import biomesoplenty.api.block.BOPBlocks;
 import com.nemonotfound.nemos.mossy.blocks.world.level.block.MossyBlocks;
 import com.nemonotfound.nemos.vertical.slabs.client.data.models.model.NemosVerticalModelTemplates;
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.VerticalSlabBlocks;
@@ -31,9 +32,11 @@ public class ModelProvider extends FabricModelProvider {
     private static final String TOP_SUFFIX = "_top";
     private static final String SIDE_SUFFIX = "_side";
     private static final String BOTTOM_SUFFIX = "_bottom";
+    private final GenerationTarget target;
 
-    public ModelProvider(FabricPackOutput output) {
+    public ModelProvider(FabricPackOutput output, GenerationTarget target) {
         super(output);
+        this.target = target;
     }
 
     @Override
@@ -180,29 +183,28 @@ public class ModelProvider extends FabricModelProvider {
         generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_TUFF_BRICKS, VerticalSlabBlocks.WARPED_MOSSY_TUFF_BRICK_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, MossyBlocks.WARPED_MOSSY_BRICKS, VerticalSlabBlocks.WARPED_MOSSY_BRICK_VERTICAL_SLAB);
 
-//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_WHITE_SANDSTONE, BOPBlocks.WHITE_SANDSTONE, VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WHITE_SANDSTONE, BOPBlocks.SMOOTH_WHITE_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WHITE_SANDSTONE, BOPBlocks.WHITE_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_ORANGE_SANDSTONE, BOPBlocks.ORANGE_SANDSTONE, VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.ORANGE_SANDSTONE, BOPBlocks.SMOOTH_ORANGE_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.ORANGE_SANDSTONE, BOPBlocks.ORANGE_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_BLACK_SANDSTONE, BOPBlocks.BLACK_SANDSTONE, VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.BLACK_SANDSTONE, BOPBlocks.SMOOTH_BLACK_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.BLACK_SANDSTONE, BOPBlocks.BLACK_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.BRIMSTONE_BRICKS, VerticalSlabBlocks.BRIMSTONE_BRICK_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.FIR_PLANKS, VerticalSlabBlocks.FIR_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.PINE_PLANKS, VerticalSlabBlocks.PINE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAPLE_PLANKS, VerticalSlabBlocks.MAPLE_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.REDWOOD_PLANKS, VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAHOGANY_PLANKS, VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.JACARANDA_PLANKS, VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.PALM_PLANKS, VerticalSlabBlocks.PALM_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WILLOW_PLANKS, VerticalSlabBlocks.WILLOW_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.DEAD_PLANKS, VerticalSlabBlocks.DEAD_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAGIC_PLANKS, VerticalSlabBlocks.MAGIC_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.UMBRAN_PLANKS, VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.HELLBARK_PLANKS, VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB);
-//        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.EMPYREAL_PLANKS, VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB);
+        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_WHITE_SANDSTONE, BOPBlocks.WHITE_SANDSTONE, VerticalSlabBlocks.CUT_WHITE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WHITE_SANDSTONE, BOPBlocks.SMOOTH_WHITE_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_WHITE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WHITE_SANDSTONE, BOPBlocks.WHITE_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.WHITE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_ORANGE_SANDSTONE, BOPBlocks.ORANGE_SANDSTONE, VerticalSlabBlocks.CUT_ORANGE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.ORANGE_SANDSTONE, BOPBlocks.SMOOTH_ORANGE_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_ORANGE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.ORANGE_SANDSTONE, BOPBlocks.ORANGE_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.ORANGE_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModelForCutSandstone(blockModelGenerators, BOPBlocks.CUT_BLACK_SANDSTONE, BOPBlocks.BLACK_SANDSTONE, VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.BLACK_SANDSTONE, BOPBlocks.SMOOTH_BLACK_SANDSTONE, TOP_SUFFIX, VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.BLACK_SANDSTONE, BOPBlocks.BLACK_SANDSTONE, TOP_SUFFIX, "", BOTTOM_SUFFIX, VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.FIR_PLANKS, VerticalSlabBlocks.FIR_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.PINE_PLANKS, VerticalSlabBlocks.PINE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAPLE_PLANKS, VerticalSlabBlocks.MAPLE_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.REDWOOD_PLANKS, VerticalSlabBlocks.REDWOOD_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAHOGANY_PLANKS, VerticalSlabBlocks.MAHOGANY_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.JACARANDA_PLANKS, VerticalSlabBlocks.JACARANDA_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.PALM_PLANKS, VerticalSlabBlocks.PALM_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.WILLOW_PLANKS, VerticalSlabBlocks.WILLOW_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.DEAD_PLANKS, VerticalSlabBlocks.DEAD_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.MAGIC_PLANKS, VerticalSlabBlocks.MAGIC_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.UMBRAN_PLANKS, VerticalSlabBlocks.UMBRAN_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.HELLBARK_PLANKS, VerticalSlabBlocks.HELLBARK_VERTICAL_SLAB);
+        generateVerticalSlabBlockModel(blockModelGenerators, BOPBlocks.EMPYREAL_PLANKS, VerticalSlabBlocks.EMPYREAL_VERTICAL_SLAB);
 
 //        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.ASPEN.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_ASPEN_VERTICAL_SLAB, "aspen/planks");
 //        generateVerticalSlabBlockModel(blockModelGenerators, BWGWood.BAOBAB.planks(), VerticalSlabBlocks.BIOMES_WEVE_GONE_BOABAB_VERTICAL_SLAB, "baobab/planks");
@@ -280,6 +282,9 @@ public class ModelProvider extends FabricModelProvider {
     }
 
     private void registerSmoothStone(BlockModelGenerators blockModelGenerators) {
+        if (!target.owns(VerticalSlabBlocks.SMOOTH_STONE_VERTICAL_SLAB)) {
+            return;
+        }
         var textureMapping = new TextureMapping().put(TextureSlot.TOP, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE_SLAB, "_side"))
                 .put(TextureSlot.BOTTOM, TextureMapping.getBlockTexture(Blocks.SMOOTH_STONE))
@@ -321,7 +326,7 @@ public class ModelProvider extends FabricModelProvider {
 
     private String retrieveNewPath(String oldPath, String path) {
         if (path.isEmpty()) {
-            return "block/" +  oldPath;
+            return "block/" + oldPath;
         }
 
         return "block/" + path;
@@ -357,6 +362,9 @@ public class ModelProvider extends FabricModelProvider {
             Block block,
             MultiVariant fullMultiVariant
     ) {
+        if (!target.owns(block)) {
+            return;
+        }
         var multiVariant = plainVariant(NemosVerticalModelTemplates.VERTICAL_SLAB.create(block, textureMapping, blockModelGenerators.modelOutput));
         var leftMultiVariant = plainVariant(NemosVerticalModelTemplates.VERTICAL_SLAB_LEFT.createWithSuffix(block, "_left", textureMapping, blockModelGenerators.modelOutput));
         var rightMultiVariant = plainVariant(NemosVerticalModelTemplates.VERTICAL_SLAB_RIGHT.createWithSuffix(block, "_right", textureMapping, blockModelGenerators.modelOutput));

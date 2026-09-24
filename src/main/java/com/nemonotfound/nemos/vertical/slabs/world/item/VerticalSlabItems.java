@@ -163,7 +163,6 @@ public class VerticalSlabItems {
     public static final Item CUT_BLACK_SANDSTONE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.CUT_BLACK_SANDSTONE_VERTICAL_SLAB, VerticalSlabBlocks.CUT_BLACK_SANDSTONE_VERTICAL_SLAB);
     public static final Item SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB, VerticalSlabBlocks.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB);
     public static final Item BLACK_SANDSTONE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.BLACK_SANDSTONE_VERTICAL_SLAB, VerticalSlabBlocks.BLACK_SANDSTONE_VERTICAL_SLAB);
-    public static final Item BRIMSTONE_BRICK_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.BRIMSTONE_BRICK_VERTICAL_SLAB, VerticalSlabBlocks.BRIMSTONE_BRICK_VERTICAL_SLAB);
     public static final Item FIR_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.FIR_VERTICAL_SLAB, VerticalSlabBlocks.FIR_VERTICAL_SLAB);
     public static final Item PINE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.PINE_VERTICAL_SLAB, VerticalSlabBlocks.PINE_VERTICAL_SLAB);
     public static final Item MAPLE_VERTICAL_SLAB = registerNullableBlock(VerticalSlabBlockItemIds.MAPLE_VERTICAL_SLAB, VerticalSlabBlocks.MAPLE_VERTICAL_SLAB);

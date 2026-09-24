@@ -1,4 +1,4 @@
-# Changelog v2.3.2
+# Changelog v2.3.3
 
 ## Fixes
-- Fixed air getting caught on fire
+- Fixed BOP blocks not having a texture

@@ -110,8 +110,7 @@ public class BlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .addOptional(VerticalSlabBlockItemIds.ORANGE_SANDSTONE_VERTICAL_SLAB.block())
                 .addOptional(VerticalSlabBlockItemIds.CUT_BLACK_SANDSTONE_VERTICAL_SLAB.block())
                 .addOptional(VerticalSlabBlockItemIds.SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB.block())
-                .addOptional(VerticalSlabBlockItemIds.BLACK_SANDSTONE_VERTICAL_SLAB.block())
-                .addOptional(VerticalSlabBlockItemIds.BRIMSTONE_BRICK_VERTICAL_SLAB.block());
+                .addOptional(VerticalSlabBlockItemIds.BLACK_SANDSTONE_VERTICAL_SLAB.block());
 //                .addOptional(VerticalSlabBlockItemIds.BIOMES_WEVE_GONE_BLACK_SANDSTONE_VERTICAL_SLAB.block())
 //                .addOptional(VerticalSlabBlockItemIds.BIOMES_WEVE_GONE_SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB.block())
 //                .addOptional(VerticalSlabBlockItemIds.BIOMES_WEVE_GONE_CUT_BLACK_SANDSTONE_VERTICAL_SLAB.block())

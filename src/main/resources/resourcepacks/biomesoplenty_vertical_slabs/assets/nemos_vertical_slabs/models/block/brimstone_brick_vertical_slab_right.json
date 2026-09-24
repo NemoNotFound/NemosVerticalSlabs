@@ -1,8 +1,0 @@
-{
-  "parent": "nemos_vertical_slabs:block/parent/vertical_slab_right",
-  "textures": {
-    "bottom": "biomesoplenty:block/brimstone_bricks",
-    "side": "biomesoplenty:block/brimstone_bricks",
-    "top": "biomesoplenty:block/brimstone_bricks"
-  }
-}

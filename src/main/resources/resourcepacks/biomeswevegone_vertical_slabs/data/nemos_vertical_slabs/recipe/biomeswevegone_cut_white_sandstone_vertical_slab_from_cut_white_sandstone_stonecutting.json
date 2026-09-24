@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "biomeswevegone:cut_white_sandstone",
+  "result": {
+    "count": 2,
+    "id": "nemos_vertical_slabs:biomeswevegone_cut_white_sandstone_vertical_slab"
+  }
+}

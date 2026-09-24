@@ -152,7 +152,6 @@ public class VerticalSlabBlockItemIds {
     public static final BlockItemId CUT_BLACK_SANDSTONE_VERTICAL_SLAB = create("cut_black_sandstone_vertical_slab");
     public static final BlockItemId SMOOTH_BLACK_SANDSTONE_VERTICAL_SLAB = create("smooth_black_sandstone_vertical_slab");
     public static final BlockItemId BLACK_SANDSTONE_VERTICAL_SLAB = create("black_sandstone_vertical_slab");
-    public static final BlockItemId BRIMSTONE_BRICK_VERTICAL_SLAB = create("brimstone_brick_vertical_slab");
     public static final BlockItemId FIR_VERTICAL_SLAB = create("fir_vertical_slab");
     public static final BlockItemId PINE_VERTICAL_SLAB = create("pine_vertical_slab");
     public static final BlockItemId MAPLE_VERTICAL_SLAB = create("maple_vertical_slab");

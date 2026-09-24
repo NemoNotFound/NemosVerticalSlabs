@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=back": {
+      "model": "nemos_vertical_slabs:block/jacaranda_vertical_slab_back"
+    },
+    "type=double": {
+      "model": "biomesoplenty:block/jacaranda_planks"
+    },
+    "type=front": {
+      "model": "nemos_vertical_slabs:block/jacaranda_vertical_slab"
+    },
+    "type=left": {
+      "model": "nemos_vertical_slabs:block/jacaranda_vertical_slab_left"
+    },
+    "type=right": {
+      "model": "nemos_vertical_slabs:block/jacaranda_vertical_slab_right"
+    }
+  }
+}

@@ -194,10 +194,6 @@
     {
       "id": "nemos_vertical_slabs:black_sandstone_vertical_slab",
       "required": false
-    },
-    {
-      "id": "nemos_vertical_slabs:brimstone_brick_vertical_slab",
-      "required": false
     }
   ]
 }
