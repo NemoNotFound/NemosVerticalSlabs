@@ -42,18 +42,13 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	compileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
-	runtimeOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
 	compileOnly("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
-	runtimeOnly("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
 	compileOnly("maven.modrinth:terrablender:${terrablender_version}-fabric")
-	runtimeOnly("maven.modrinth:terrablender:${terrablender_version}-fabric")
 	compileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
-	runtimeOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
 	//compileOnly("maven.modrinth:oh-the-biomes-weve-gone:${oh_the_biomes_weve_gone_version}")
 	//compileOnly("maven.modrinth:geckolib:${geckolib_version}-fabric")
 	//compileOnly("maven.modrinth:corgilib:${corgilib_version}")
 	compileOnly("maven.modrinth:oh-the-trees-youll-grow:${oh_the_trees_youll_grow_version}")
-	runtimeOnly("maven.modrinth:oh-the-trees-youll-grow:${oh_the_trees_youll_grow_version}")
 }
 
 processResources {
