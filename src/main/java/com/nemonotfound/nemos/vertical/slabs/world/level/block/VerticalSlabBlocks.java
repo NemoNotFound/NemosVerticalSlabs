@@ -8,6 +8,7 @@ import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ColorCollection;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WeatheringCopperCollection;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -229,6 +230,14 @@ public class VerticalSlabBlocks {
     public static final Block SMOOTH_QUARTZ_VERTICAL_SLAB = registerVerticalSlab(
             VerticalSlabBlockItemIds.SMOOTH_QUARTZ_VERTICAL_SLAB.block(),
             SMOOTH_QUARTZ_SLAB
+    );
+    public static final ColorCollection<Block> CONCRETE_VERTICAL_SLABS = registerColoredVerticalSlabs(
+            VerticalSlabBlockItemIds.CONCRETE_VERTICAL_SLABS,
+            CONCRETE
+    );
+    public static final ColorCollection<Block> WOOL_VERTICAL_SLABS = registerColoredVerticalSlabs(
+            VerticalSlabBlockItemIds.WOOL_VERTICAL_SLABS,
+            WOOL
     );
     public static final WeatheringCopperCollection<Block> CUT_COPPER_VERTICAL_SLABS = registerCopperVerticalSlab(VerticalSlabBlockItemIds.CUT_COPPER_VERTICAL_SLABS);
 
@@ -932,6 +941,13 @@ public class VerticalSlabBlocks {
                 VerticalSlabBlock::new,
                 properties
         );
+    }
+
+    private static ColorCollection<Block> registerColoredVerticalSlabs(
+            ColorCollection<BlockItemId> ids,
+            ColorCollection<Block> blocksToCopy
+    ) {
+        return ColorCollection.zipMap(ids, blocksToCopy, (id, block) -> registerVerticalSlab(id.block(), block));
     }
 
     private static WeatheringCopperCollection<Block> registerCopperVerticalSlab(WeatheringCopperCollection<BlockItemId> weatheringCopperCollection) {

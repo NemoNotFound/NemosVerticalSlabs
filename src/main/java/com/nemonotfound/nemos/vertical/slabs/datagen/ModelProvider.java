@@ -23,6 +23,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ColorCollection;
 import org.jetbrains.annotations.NotNull;
 
 import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
@@ -93,6 +94,16 @@ public class ModelProvider extends FabricModelProvider {
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.PURPUR_BLOCK, VerticalSlabBlocks.PURPUR_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_BLOCK, TOP_SUFFIX, SIDE_SUFFIX, TOP_SUFFIX, VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB);
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.QUARTZ_BLOCK, Blocks.SMOOTH_QUARTZ, BOTTOM_SUFFIX, VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB);
+        ColorCollection.zipApply(
+                Blocks.CONCRETE,
+                VerticalSlabBlocks.CONCRETE_VERTICAL_SLABS,
+                (block, slab) -> generateVerticalSlabBlockModel(blockModelGenerators, block, slab)
+        );
+        ColorCollection.zipApply(
+                Blocks.WOOL,
+                VerticalSlabBlocks.WOOL_VERTICAL_SLABS,
+                (block, slab) -> generateVerticalSlabBlockModel(blockModelGenerators, block, slab)
+        );
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.CUT_COPPER.weathering().unaffected(), VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected());
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.CUT_COPPER.weathering().exposed(), VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().exposed());
         generateVerticalSlabBlockModel(blockModelGenerators, Blocks.CUT_COPPER.weathering().weathered(), VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().weathered());

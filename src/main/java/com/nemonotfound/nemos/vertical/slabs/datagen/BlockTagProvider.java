@@ -73,6 +73,12 @@ public class BlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(VerticalSlabBlockItemIds.CUT_COPPER_VERTICAL_SLABS.waxed().weathered().block())
                 .add(VerticalSlabBlockItemIds.CUT_COPPER_VERTICAL_SLABS.waxed().oxidized().block());
 
+        var pickaxeMineable = this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        VerticalSlabBlockItemIds.CONCRETE_VERTICAL_SLABS.forEach(id -> pickaxeMineable.add(id.block()));
+
+        var wool = this.tag(BlockTags.WOOL);
+        VerticalSlabBlockItemIds.WOOL_VERTICAL_SLABS.forEach(id -> wool.add(id.block()));
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addOptional(VerticalSlabBlockItemIds.MOSSY_STONE_VERTICAL_SLAB.block())
                 .addOptional(VerticalSlabBlockItemIds.MOSSY_COBBLED_DEEPSLATE_VERTICAL_SLAB.block())

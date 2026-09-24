@@ -81,6 +81,8 @@ public class LootTableProvider extends FabricBlockLootSubProvider {
         addVerticalSlabDrops(VerticalSlabBlocks.PURPUR_VERTICAL_SLAB);
         addVerticalSlabDrops(VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB);
         addVerticalSlabDrops(VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB);
+        VerticalSlabBlocks.CONCRETE_VERTICAL_SLABS.forEach(this::addVerticalSlabDrops);
+        VerticalSlabBlocks.WOOL_VERTICAL_SLABS.forEach(this::addVerticalSlabDrops);
         addVerticalSlabDrops(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected());
         addVerticalSlabDrops(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().exposed());
         addVerticalSlabDrops(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().weathered());

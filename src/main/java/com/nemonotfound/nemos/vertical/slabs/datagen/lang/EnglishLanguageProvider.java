@@ -4,9 +4,12 @@ import com.nemonotfound.nemos.vertical.slabs.world.level.block.VerticalSlabBlock
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.level.block.ColorCollection;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.MOD_ID;
 
@@ -70,6 +73,16 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(VerticalSlabBlocks.PURPUR_VERTICAL_SLAB, "Purpur Vertical Slab");
         translationBuilder.add(VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB, "Quartz Vertical Slab");
         translationBuilder.add(VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB, "Smooth Quartz Vertical Slab");
+        ColorCollection.zipApply(
+                ColorCollection.NAMES,
+                VerticalSlabBlocks.CONCRETE_VERTICAL_SLABS,
+                (color, block) -> translationBuilder.add(block, titleCase(color) + " Concrete Vertical Slab")
+        );
+        ColorCollection.zipApply(
+                ColorCollection.NAMES,
+                VerticalSlabBlocks.WOOL_VERTICAL_SLABS,
+                (color, block) -> translationBuilder.add(block, titleCase(color) + " Wool Vertical Slab")
+        );
         translationBuilder.add(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), "Cut Copper Vertical Slab");
         translationBuilder.add(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), "Exposed Cut Copper Vertical Slab");
         translationBuilder.add(VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS.weathering().weathered(), "Weathered Cut Copper Vertical Slab");
@@ -255,5 +268,11 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
 //        translationBuilder.add(VerticalSlabBlocks.BIOMES_WEVE_GONE_PALE_MUD_BRICK_VERTICAL_SLAB, "Pale Mud Brick Vertical Slab");
 //        translationBuilder.add(VerticalSlabBlocks.BIOMES_WEVE_GONE_CATTAIL_THATCH_VERTICAL_SLAB, "Cattail Thatch Vertical Slab");
 //        translationBuilder.add("resourcePack.nemos_vertical_slabs.biomeswevegone_vertical_slabs.description", "Contains all assets required for Oh The Biomes We've Gone Vertical Slabs.");
+    }
+
+    private static String titleCase(String name) {
+        return Arrays.stream(name.split("_"))
+                .map(word -> Character.toUpperCase(word.charAt(0)) + word.substring(1))
+                .collect(Collectors.joining(" "));
     }
 }

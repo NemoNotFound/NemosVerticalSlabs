@@ -15,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.ColorCollection;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -91,6 +92,16 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
                     createVerticalSlabRecipe(VerticalSlabItems.PURPUR_VERTICAL_SLAB, Items.PURPUR_BLOCK);
                     createVerticalSlabRecipe(VerticalSlabItems.QUARTZ_VERTICAL_SLAB, Items.QUARTZ_BLOCK);
                     createVerticalSlabRecipe(VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB, Items.SMOOTH_QUARTZ);
+                    ColorCollection.zipApply(
+                            VerticalSlabItems.CONCRETE_VERTICAL_SLABS,
+                            Items.CONCRETE,
+                            this::createVerticalSlabRecipe
+                    );
+                    ColorCollection.zipApply(
+                            VerticalSlabItems.WOOL_VERTICAL_SLABS,
+                            Items.WOOL,
+                            this::createVerticalSlabRecipe
+                    );
                     createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.CUT_COPPER.weathering().unaffected());
                     createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), Items.CUT_COPPER.weathering().exposed());
                     createVerticalSlabRecipe(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered(), Items.CUT_COPPER.weathering().weathered());
@@ -157,6 +168,16 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.PURPUR_VERTICAL_SLAB, Items.PURPUR_BLOCK, 2);
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.QUARTZ_VERTICAL_SLAB, Items.QUARTZ_BLOCK, 2);
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB, Items.SMOOTH_QUARTZ, 2);
+                    ColorCollection.zipApply(
+                            VerticalSlabItems.CONCRETE_VERTICAL_SLABS,
+                            Items.CONCRETE,
+                            (slab, concrete) -> this.stonecutterResultFromBase(
+                                    RecipeCategory.BUILDING_BLOCKS,
+                                    slab,
+                                    concrete,
+                                    2
+                            )
+                    );
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.COPPER_BLOCK.weathering().unaffected(), 2);
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected(), Items.CUT_COPPER.weathering().unaffected(), 2);
                     this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed(), Items.CUT_COPPER.weathering().exposed(), 2);

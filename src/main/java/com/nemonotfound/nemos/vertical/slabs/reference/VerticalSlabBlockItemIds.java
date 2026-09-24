@@ -5,6 +5,7 @@ import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.WeatheringCopperCollection;
+import net.minecraft.world.level.block.ColorCollection;
 
 import static com.nemonotfound.nemos.vertical.slabs.NemosVerticalSlabs.MOD_ID;
 
@@ -62,6 +63,8 @@ public class VerticalSlabBlockItemIds {
     public static final BlockItemId PURPUR_VERTICAL_SLAB = create("purpur_vertical_slab");
     public static final BlockItemId QUARTZ_VERTICAL_SLAB = create("quartz_vertical_slab");
     public static final BlockItemId SMOOTH_QUARTZ_VERTICAL_SLAB = create("smooth_quartz_vertical_slab");
+    public static final ColorCollection<BlockItemId> CONCRETE_VERTICAL_SLABS = createColored("concrete_vertical_slab");
+    public static final ColorCollection<BlockItemId> WOOL_VERTICAL_SLABS = createColored("wool_vertical_slab");
     public static final WeatheringCopperCollection<BlockItemId> CUT_COPPER_VERTICAL_SLABS = createWeatheringCopper("cut_copper_vertical_slab");
     public static final BlockItemId MOSSY_OAK_VERTICAL_SLAB = create("mossy_oak_vertical_slab");
     public static final BlockItemId MOSSY_SPRUCE_VERTICAL_SLAB = create("mossy_spruce_vertical_slab");
@@ -237,6 +240,10 @@ public class VerticalSlabBlockItemIds {
     private static BlockItemId create(final String name) {
         Identifier id = Identifier.fromNamespaceAndPath(MOD_ID, name);
         return create(id, id);
+    }
+
+    private static ColorCollection<BlockItemId> createColored(final String name) {
+        return ColorCollection.prefixWithColor(ColorCollection.create(name)).map(VerticalSlabBlockItemIds::create);
     }
 
     private static WeatheringCopperCollection<BlockItemId> createWeatheringCopper(final String name) {

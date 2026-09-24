@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ColorCollection;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WeatheringCopperCollection;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
@@ -70,6 +71,16 @@ public class VerticalSlabItems {
     public static final Item PURPUR_VERTICAL_SLAB = registerBlock(VerticalSlabBlockItemIds.PURPUR_VERTICAL_SLAB, VerticalSlabBlocks.PURPUR_VERTICAL_SLAB);
     public static final Item QUARTZ_VERTICAL_SLAB = registerBlock(VerticalSlabBlockItemIds.QUARTZ_VERTICAL_SLAB, VerticalSlabBlocks.QUARTZ_VERTICAL_SLAB);
     public static final Item SMOOTH_QUARTZ_VERTICAL_SLAB = registerBlock(VerticalSlabBlockItemIds.SMOOTH_QUARTZ_VERTICAL_SLAB, VerticalSlabBlocks.SMOOTH_QUARTZ_VERTICAL_SLAB);
+    public static final ColorCollection<Item> CONCRETE_VERTICAL_SLABS = ColorCollection.zipMap(
+            VerticalSlabBlockItemIds.CONCRETE_VERTICAL_SLABS,
+            VerticalSlabBlocks.CONCRETE_VERTICAL_SLABS,
+            VerticalSlabItems::registerBlock
+    );
+    public static final ColorCollection<Item> WOOL_VERTICAL_SLABS = ColorCollection.zipMap(
+            VerticalSlabBlockItemIds.WOOL_VERTICAL_SLABS,
+            VerticalSlabBlocks.WOOL_VERTICAL_SLABS,
+            VerticalSlabItems::registerBlock
+    );
     public static final WeatheringCopperCollection<Item> CUT_COPPER_VERTICAL_SLABS = WeatheringCopperCollection.registerItems(
             VerticalSlabBlockItemIds.CUT_COPPER_VERTICAL_SLABS,
             VerticalSlabBlocks.CUT_COPPER_VERTICAL_SLABS,

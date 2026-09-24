@@ -1,0 +1,8 @@
+{
+  "parent": "nemos_vertical_slabs:block/parent/vertical_slab_back",
+  "textures": {
+    "bottom": "minecraft:block/white_wool",
+    "side": "minecraft:block/white_wool",
+    "top": "minecraft:block/white_wool"
+  }
+}

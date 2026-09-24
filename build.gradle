@@ -42,9 +42,13 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	compileOnly("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
+	localRuntime("maven.modrinth:nemos-mossy-blocks:${nemos_mossy_blocks_version}-fabric")
 	compileOnly("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
+	localRuntime("maven.modrinth:biomes-o-plenty:${biomes_o_plenty_version}-fabric")
 	compileOnly("maven.modrinth:terrablender:${terrablender_version}-fabric")
+	localRuntime("maven.modrinth:terrablender:${terrablender_version}-fabric")
 	compileOnly("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
+	localRuntime("maven.modrinth:glitchcore:${glitchcore_version}-fabric")
 	//compileOnly("maven.modrinth:oh-the-biomes-weve-gone:${oh_the_biomes_weve_gone_version}")
 	//compileOnly("maven.modrinth:geckolib:${geckolib_version}-fabric")
 	//compileOnly("maven.modrinth:corgilib:${corgilib_version}")

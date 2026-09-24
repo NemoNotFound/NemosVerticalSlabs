@@ -1,4 +1,4 @@
-# Changelog v2.3.4
+# Changelog v2.4
 
-## Fixes
-- Fixed BOP blocks not having a texture
+## Additions
+- Added wool and concrete vertical slabs

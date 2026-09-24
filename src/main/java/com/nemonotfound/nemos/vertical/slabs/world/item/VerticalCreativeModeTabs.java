@@ -80,6 +80,8 @@ public class VerticalCreativeModeTabs {
         addDisplayItem(VerticalSlabItems.PURPUR_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.QUARTZ_VERTICAL_SLAB);
         addDisplayItem(VerticalSlabItems.SMOOTH_QUARTZ_VERTICAL_SLAB);
+        VerticalSlabItems.CONCRETE_VERTICAL_SLABS.forEach(VerticalCreativeModeTabs::addDisplayItem);
+        VerticalSlabItems.WOOL_VERTICAL_SLABS.forEach(VerticalCreativeModeTabs::addDisplayItem);
         addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().unaffected());
         addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().exposed());
         addDisplayItem(VerticalSlabItems.CUT_COPPER_VERTICAL_SLABS.weathering().weathered());
