@@ -10,7 +10,7 @@
               "type": "minecraft:set_count",
               "condition": {
                 "type": "minecraft:match_block",
-                "blocks": "nemos_vertical_slabs:mangrove_vertical_slab",
+                "blocks": "nemos_vertical_slabs:mossy_stone_brick_vertical_slab",
                 "state": {
                   "type": "double"
                 }
@@ -21,7 +21,7 @@
               "type": "minecraft:explosion_decay"
             }
           ],
-          "name": "nemos_vertical_slabs:mangrove_vertical_slab"
+          "name": "nemos_vertical_slabs:mossy_stone_brick_vertical_slab"
         }
       ],
       "rolls": 1

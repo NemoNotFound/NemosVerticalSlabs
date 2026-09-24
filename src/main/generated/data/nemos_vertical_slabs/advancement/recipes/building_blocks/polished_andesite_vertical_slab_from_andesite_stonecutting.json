@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:polished_andesite_vertical_slab_from_andesite_stonecutting"
+        "recipes": "nemos_vertical_slabs:polished_andesite_vertical_slab_from_andesite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

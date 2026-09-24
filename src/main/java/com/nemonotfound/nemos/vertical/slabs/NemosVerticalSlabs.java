@@ -1,7 +1,6 @@
 package com.nemonotfound.nemos.vertical.slabs;
 
 import com.nemonotfound.nemos.vertical.slabs.registry.FlammableBlocks;
-import com.nemonotfound.nemos.vertical.slabs.registry.FuelItems;
 import com.nemonotfound.nemos.vertical.slabs.registry.OxidizableBlocks;
 import com.nemonotfound.nemos.vertical.slabs.world.item.VerticalCreativeModeTabs;
 import com.nemonotfound.nemos.vertical.slabs.world.item.VerticalSlabItems;
@@ -37,7 +36,6 @@ public class NemosVerticalSlabs implements ModInitializer {
 
 		OxidizableBlocks.init();
 		FlammableBlocks.init();
-		FuelItems.init();
 	}
 
 	private void registerBuiltInVerticalSlabsResourcePack(String modId, String packId, String packName) {

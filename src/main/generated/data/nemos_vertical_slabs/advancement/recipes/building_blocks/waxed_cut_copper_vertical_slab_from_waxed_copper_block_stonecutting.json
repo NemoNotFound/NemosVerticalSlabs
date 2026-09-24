@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:waxed_cut_copper_vertical_slab_from_waxed_copper_block_stonecutting"
+        "recipes": "nemos_vertical_slabs:waxed_cut_copper_vertical_slab_from_waxed_copper_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

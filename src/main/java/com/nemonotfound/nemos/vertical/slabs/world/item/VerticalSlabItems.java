@@ -9,7 +9,9 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.WeatheringCopperCollection;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -265,6 +267,14 @@ public class VerticalSlabItems {
     }
 
     private static Item registerBlock(final BlockItemId id, final Block block, final BiFunction<Block, Item.Properties, Item> itemFactory, final Item.Properties properties) {
+        var soundType = block.defaultBlockState().getSoundType();
+        if (soundType == SoundType.WOOD
+                || soundType == SoundType.NETHER_WOOD
+                || soundType == SoundType.BAMBOO_WOOD
+                || soundType == SoundType.CHERRY_WOOD) {
+            properties.cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_SLABS);
+        }
+
         return registerItem(
                 id.item(),
                 (p) -> itemFactory.apply(block, p),

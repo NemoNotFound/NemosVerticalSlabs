@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:mangrove_vertical_slab"
+        "recipes": "nemos_vertical_slabs:mangrove_vertical_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -6,14 +6,15 @@ import com.nemonotfound.nemos.vertical.slabs.world.level.block.state.properties.
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.predicates.MatchBlock;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -271,11 +272,12 @@ public class LootTableProvider extends FabricBlockLootSubProvider {
 
     private LootTable.Builder verticalSlabDrops(Block drop) {
         return LootTable.lootTable()
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                .withPool(LootPool.lootPool().setRolls(ContextIntProviders.exactly(1))
                         .add(this.applyExplosionDecay(drop, LootItem.lootTableItem(drop)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))
-                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(drop)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
-                                                        .hasProperty(VerticalSlabBlock.TYPE, VerticalSlabType.DOUBLE)))))));
+                                .apply(SetItemCountFunction.setCount(ContextIntProviders.exactly(2))
+                                        .when(Holder.direct(MatchBlock.blockMatches(blocks, drop,
+                                                StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(VerticalSlabBlock.TYPE, VerticalSlabType.DOUBLE))
+                                                .build()))))));
     }
 }

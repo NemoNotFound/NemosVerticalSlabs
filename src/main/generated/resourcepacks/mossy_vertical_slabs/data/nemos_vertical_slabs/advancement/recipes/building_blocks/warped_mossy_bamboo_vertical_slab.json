@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:warped_mossy_bamboo_vertical_slab"
+        "recipes": "nemos_vertical_slabs:warped_mossy_bamboo_vertical_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

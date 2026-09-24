@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:warped_mossy_stone_vertical_slab_from_warped_mossy_stone_stonecutting"
+        "recipes": "nemos_vertical_slabs:warped_mossy_stone_vertical_slab_from_warped_mossy_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

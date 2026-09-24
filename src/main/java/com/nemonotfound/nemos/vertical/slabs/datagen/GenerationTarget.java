@@ -36,15 +36,21 @@ public enum GenerationTarget {
             "empyreal_vertical_slab"
     );
 
+    private static final Set<String> VANILLA_MOSSY_BLOCKS = Set.of(
+            "mossy_cobblestone_vertical_slab",
+            "mossy_stone_brick_vertical_slab"
+    );
+
     public boolean owns(Block block) {
         return owns(BuiltInRegistries.BLOCK.getKey(block).getPath());
     }
 
     public boolean owns(String path) {
-        boolean mossy = path.startsWith("mossy_")
-                || path.startsWith("pale_mossy_")
-                || path.startsWith("crimson_mossy_")
-                || path.startsWith("warped_mossy_");
+        boolean mossy = !VANILLA_MOSSY_BLOCKS.contains(path)
+                && (path.startsWith("mossy_")
+                    || path.startsWith("pale_mossy_")
+                    || path.startsWith("crimson_mossy_")
+                    || path.startsWith("warped_mossy_"));
 
         return switch (this) {
             case MOSSY -> mossy;

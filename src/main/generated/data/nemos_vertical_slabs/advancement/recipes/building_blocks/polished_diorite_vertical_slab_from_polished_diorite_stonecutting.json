@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:polished_diorite_vertical_slab_from_polished_diorite_stonecutting"
+        "recipes": "nemos_vertical_slabs:polished_diorite_vertical_slab_from_polished_diorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

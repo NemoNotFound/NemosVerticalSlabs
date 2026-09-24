@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nemos_vertical_slabs:cobblestone_vertical_slab_from_cobblestone_stonecutting"
+        "recipes": "nemos_vertical_slabs:cobblestone_vertical_slab_from_cobblestone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -2,7 +2,6 @@ package com.nemonotfound.nemos.vertical.slabs.world.level.block;
 
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.state.properties.NemosVerticalBlockStateProperties;
 import com.nemonotfound.nemos.vertical.slabs.world.level.block.state.properties.VerticalSlabType;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
@@ -33,17 +32,12 @@ import org.jetbrains.annotations.Nullable;
 
 public class VerticalSlabBlock extends Block implements SimpleWaterloggedBlock {
 
-    public static final MapCodec<VerticalSlabBlock> CODEC = VerticalSlabBlock.simpleCodec(VerticalSlabBlock::new);
     public static EnumProperty<@NotNull VerticalSlabType> TYPE = NemosVerticalBlockStateProperties.VERTICAL_SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     protected static final VoxelShape FRONT_SHAPE = Block.box(0, 0, 0, 16, 16, 8);
     protected static final VoxelShape LEFT_SHAPE = Block.box(0, 0, 0, 8, 16, 16);
     protected static final VoxelShape RIGHT_SHAPE = Block.box(8, 0, 0, 16, 16, 16);
     protected static final VoxelShape BACK_SHAPE = Block.box(0, 0, 8, 16, 16, 16);
-
-    public MapCodec<? extends VerticalSlabBlock> getCodec() {
-        return CODEC;
-    }
 
     public VerticalSlabBlock(Properties properties) {
         super(properties);

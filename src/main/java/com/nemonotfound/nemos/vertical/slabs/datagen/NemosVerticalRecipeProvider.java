@@ -8,10 +8,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
@@ -27,8 +29,12 @@ public class NemosVerticalRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NotNull Provider provider, @NotNull RecipeOutput recipeOutput) {
-        return new RecipeProvider(provider, recipeOutput) {
+    protected @NotNull RecipeProvider createRecipeProvider(
+            HolderLookup.@NotNull Provider provider,
+            @NotNull BootstrapContext<Recipe<?>> recipeOutput,
+            @NotNull BootstrapContext<Advancement> advancementOutput
+    ) {
+        return new RecipeProvider(recipeOutput, advancementOutput) {
 
             @Override
             public void buildRecipes() {
